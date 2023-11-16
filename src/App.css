@@ -28,3 +28,10 @@
   grid-template-columns: 20% 80%;
   grid-template-areas: "topNav topNav" "leftNav main";
 }
+
+#app .mainContainer{
+  grid-area: main;
+  overflow-y: scroll;
+  padding: 20px 30px;
+  padding-bottom: 100px;
+}

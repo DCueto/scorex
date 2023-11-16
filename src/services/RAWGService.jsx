@@ -29,6 +29,16 @@ class RAWGService {
 
   }
 
+  async customSearch(search){
+    const apiKey = import.meta.env.VITE_RAWG_APIKEY;
+    const url = `https://api.rawg.io/api/games?key=${apiKey}&search=${search}`;
+    
+    return await this.get(url)
+      .then( response => response.json() )
+      .then( data => data)
+      .catch( err => console.log('Error en el fetch: ', err ) );
+  }
+
 
 }
 
