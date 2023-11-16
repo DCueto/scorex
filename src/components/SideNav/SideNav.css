@@ -1,0 +1,20 @@
+
+.sideNav{
+  height: 100vh;
+  width: 20vw;
+  grid-area: leftNav;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: #3F3F3F;
+  font-weight: 500;
+}
+
+.sideNav ul{
+  width: 70%;
+  margin-top: 40px;
+}
+
+.sideNav ul li{
+  margin: 20px 0;
+}

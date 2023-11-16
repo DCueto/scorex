@@ -1,4 +1,6 @@
+import './Carrousel.css';
 import RAWGService from "../../services/RAWGService";
+import CarrouselCard from './CarrouselCard';
 import { useEffect, useState } from "react";
 
 function Carrousel(){
@@ -17,11 +19,13 @@ function Carrousel(){
   return (
     <section className="carrousel">
       <h1>Latest Games</h1>
+      <div className='containerCarrousel'>
       {
         data.map( (game) =>
-          (<h2 key={game.id}>{game.name}</h2>)
+          (<CarrouselCard key={game.id} title={game.name} metascore={game.metacritic} src={game.background_image} />)
         )
       }
+      </div>
 
     </section>
   )

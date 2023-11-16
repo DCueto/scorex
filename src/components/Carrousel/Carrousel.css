@@ -1,0 +1,12 @@
+.carrousel{
+  height: 350px;
+  overflow: hidden;
+}
+
+.carrousel .containerCarrousel{
+  display: flex;
+  gap: 10px;
+  height: 80%;
+  overflow-x: scroll;
+  padding: 10px;
+}
