@@ -1,0 +1,60 @@
+.carrousel .carrouselCard{
+  width: 230px;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px gray;
+}
+
+.carrouselCard .img{
+  height: 80%;
+  position: relative;
+}
+
+.carrouselCard .imgCover{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.carrouselCard .imgBlur{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: blur(7px);
+}
+
+
+.carrouselCard .carrouselCardInfo{
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.carrouselCardInfo span{
+  height: 40px;
+  width: 40px;
+  background-color: blue;
+  border-radius: 5px;
+  margin-left: 10px;
+  flex-shrink: 0;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.carrouselCardInfo p{
+  margin-right: 10px;
+  font-size: 18px;
+}
