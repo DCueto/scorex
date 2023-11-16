@@ -4,10 +4,11 @@ import GamePage from "./pages/GamePage/GamePage";
 
 function Router(){
   
-  return <Routes>
+  return (
+  <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/game" element={<GamePage />} />
   </Routes>
+  )
 }
-
 export default Router;

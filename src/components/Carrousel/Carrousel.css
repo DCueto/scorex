@@ -1,12 +1,85 @@
 .carrousel{
-  height: 350px;
   overflow: hidden;
+  position: relative;
+}
+
+.carrousel .carrouselButtons{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: #A9A9A9;
+  display: flex;
+  gap: 10px;
+}
+
+.carrouselButtons i{
+  cursor: pointer;
+  font-size: 24px;
 }
 
 .carrousel .containerCarrousel{
   display: flex;
   gap: 10px;
-  height: 80%;
   overflow-x: scroll;
   padding: 10px;
+}
+
+.carrouselGradient{
+  content: "";
+  position: absolute;
+  height: calc(100% - 40px);
+  width: 40px;
+  bottom: 0;
+  z-index: 2;
+}
+
+.carrouselGradient.leftGradient{
+  left: 0;
+  background: linear-gradient(270deg,hsla(0,0%,100%,0),#F7F9FB 28px,#F7F9FB);
+}
+
+.carrouselGradient.rightGradient{
+  right: 0;
+  background: linear-gradient(90deg,hsla(0,0%,100%,0),#F7F9FB 28px,#F7F9FB);
+}
+
+.none{
+  display: none;
+}
+
+.block{
+  display: block;
+}
+
+/* .carrousel .containerCarrousel:before{
+  content: "";
+  position: absolute;
+  height: calc(100% - 40px);
+  width: 40px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 28px,#fff);
+} */
+
+/* .carrousel .containerCarrousel:after{
+  content: "";
+  position: absolute;
+  height: calc(100% - 40px);
+  width: 40px;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 28px,#fff);
+} */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.containerCarrousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.containerCarrousel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

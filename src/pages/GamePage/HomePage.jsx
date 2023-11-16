@@ -9,17 +9,10 @@ function HomePage(){
 
   return (
     <>
-      <Header />
-      <SideNav />
-      <main className="mainContainer">
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Footer />
-      </main>
+      <Carrousel />
+      {/* <Carrousel />
+      <Carrousel /> */}
+      <Footer />
     </>
   )
 }
