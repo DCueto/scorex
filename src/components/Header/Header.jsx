@@ -15,7 +15,7 @@ function Header(){
     <header className='topNav'>
       <img className='logo-scorex' src={logo} />
       <input type="text" placeholder="Introduce tu busqueda" onKeyDown={handleSearchSubmit}/>
-      <button>Login</button>
+      <i className="fa-regular fa-user" style="color: #c180dd;">a</i>
     </header>
   )
 }
