@@ -1,6 +1,5 @@
 import './Header.css';
 import logo from './../../assets/img/logo_full.svg';
-import { useState } from 'react';
 
 function Header({sendInputValue, isSearching}){
 

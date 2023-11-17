@@ -39,6 +39,16 @@ class RAWGService {
       .catch( err => console.log('Error en el fetch: ', err ) );
   }
 
+  async customEndpoint(url){
+    const apiKey = import.meta.env.VITE_RAWG_APIKEY;
+    url = url + '&key=' + apiKey;
+    
+    return await this.get(url)
+      .then( response => response.json() )
+      .then( data => data)
+      .catch( err => console.log('Error en el fetch: ', err ) );
+  }
+
 
 }
 

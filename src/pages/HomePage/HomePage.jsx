@@ -25,7 +25,8 @@ function HomePage({inputValue, isSearching}){
         ? <SearchResults results={searchResults} />
         :
         <>
-          <Carrousel />
+          <Carrousel endpoint="https://api.rawg.io/api/games?metacritic=50,100&ordering=-released" title="Latests Games" />
+          <Carrousel endpoint="https://api.rawg.io/api/games?metacritic=96,100&ordering=-metacritic" title="Best Games by Metacrític" />
         </>
       }
     </>

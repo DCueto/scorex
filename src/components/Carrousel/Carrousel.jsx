@@ -3,7 +3,7 @@ import RAWGService from "../../services/RAWGService";
 import CarrouselCard from './CarrouselCard';
 import { useEffect, useState, useRef } from "react"
 
-function Carrousel(){
+function Carrousel({endpoint, title}){
   const rawg = new RAWGService();
   const [data, setData] = useState([]);
   const [isLeftGradientVisible, setIsLeftGradientVisible] = useState(false);
@@ -15,7 +15,7 @@ function Carrousel(){
 
   useEffect( () => {
 
-    rawg.searchGames().then( fetchData => {
+    rawg.customEndpoint(endpoint).then( fetchData => {
       setData(fetchData.results);
     });
 
@@ -59,7 +59,7 @@ function Carrousel(){
 
   return (
     <section className="carrousel">
-      <h2>Latest Games</h2>
+      <h2>{title}</h2>
       <div className='carrouselButtons'>
         <i onClick={handleScrollLeft} className='fa-solid fa-arrow-left left-arrow'></i>
         <i onClick={handleScrollRight} className='fa-solid fa-circle-arrow-right right-arrow'></i>
