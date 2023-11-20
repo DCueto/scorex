@@ -1,10 +1,10 @@
 import './CarrouselCard.css';
 
-function CarrouselCard({title, src, metascore}){
+function CarrouselCard({title, src, metascore, id}){
 
 
   return (
-    <article className="carrouselCard">
+    <article data-id={id} className="carrouselCard">
       <div className="img">
         <img className="imgBlur" src={src} />
         <img className="imgCover" src={src} />

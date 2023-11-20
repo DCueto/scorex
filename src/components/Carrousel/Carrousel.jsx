@@ -69,7 +69,7 @@ function Carrousel({endpoint, title}){
       <span className={isRightGradientVisible ? 'rightGradient carrouselGradient' : 'rightGradient carrouselGradient none'} ref={rightGradient}></span>
       {
         data.map( (game) =>
-          (<CarrouselCard key={game.id} title={game.name} metascore={game.metacritic} src={game.background_image} />)
+          (<CarrouselCard key={game.id} id={game.id} title={game.name} metascore={game.metacritic} src={game.background_image} />)
         )
       }
       </div>
