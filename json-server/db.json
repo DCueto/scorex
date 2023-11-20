@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Daniel",
+      "surname": "Cueto",
+      "username": "DCueto",
+      "email": "dcueto14.info@gmail.com",
+      "password": "abcd1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [
+        {
+          "gameId": 324997,
+          "title": "Baldur's Gate 3",
+          "metacritic": 97
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Santi",
+      "surname": "Agudo",
+      "username": "SAgudo",
+      "email": "fdsfsfsf@gmail.com",
+      "password": "abcd1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [
+        {
+          "gameId": 324997,
+          "title": "Baldur's Gate 3",
+          "metacritic": 97
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "gameId": 324997,
+      "userId": 1,
+      "score": 10,
+      "title": "Masterpiece for the history",
+      "body": "review content"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "comment content",
+      "userId": 1
+    }
+  ],
+  "preferences": [
+    {
+      "genres": []
+    }
+  ]
+}
