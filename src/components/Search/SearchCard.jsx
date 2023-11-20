@@ -1,15 +1,15 @@
-import './CarrouselCard.css';
+import './SearchCard.css';
 
-function CarrouselCard({title, src, metascore, id}){
+function SearchCard({title, src, metascore}){
 
 
   return (
-    <article data-id={id} className="carrouselCard">
+    <article className="searchCard">
       <div className="img">
         <img className="imgBlur" src={src} />
         <img className="imgCover" src={src} />
       </div>
-      <div className="carrouselCardInfo">
+      <div className="searchCardInfo">
         <span>{metascore}</span>
         <p>{title}</p>
       </div>
@@ -17,4 +17,4 @@ function CarrouselCard({title, src, metascore, id}){
   )
 }
 
-export default CarrouselCard;
+export default SearchCard;

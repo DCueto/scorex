@@ -1,4 +1,5 @@
-.carrousel .carrouselCard{
+
+.searchCard{
   width: 200px;
   height: 282px;
   flex-shrink: 0;
@@ -8,12 +9,12 @@
   cursor: pointer;
 }
 
-.carrouselCard .img{
+.searchCard .img{
   height: 80%;
   position: relative;
 }
 
-.carrouselCard .imgCover{
+.searchCard .imgCover{
   position: absolute;
   top: 20%;
   left: 0;
@@ -22,7 +23,7 @@
 
 }
 
-.carrouselCard .imgBlur{
+.searchCard .imgBlur{
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -30,7 +31,7 @@
 }
 
 
-.carrouselCard .carrouselCardInfo{
+.searchCard .searchCardInfo{
   height: 20%;
   display: flex;
   align-items: center;
@@ -40,23 +41,22 @@
   border-radius: 10px;
 }
 
-.carrouselCardInfo span{
-  height: 30px;
-  width: 30px;
-  background-color: #00ABA0;
+.searchCardInfo span{
+  height: 40px;
+  width: 40px;
+  background-color: blue;
   border-radius: 5px;
   margin-left: 10px;
   flex-shrink: 0;
   color: white;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
 
-.carrouselCardInfo p{
+.searchCardInfo p{
   margin-right: 10px;
   font-size: 14px;
   font-weight: 600;
