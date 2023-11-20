@@ -1,0 +1,66 @@
+.registerModal{
+    width: 400px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.71);
+    padding: 30px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #000;
+  }
+  .logo{
+      margin-left: 30%;
+      width: 40%;
+      margin-bottom: 20px;
+  }
+  hr{
+      margin-bottom: 20px;
+      height: 1px;
+      background: #000;
+      border: none;
+  }
+  
+  .reg-h3{
+      display: flex;
+      justify-content: space-around;
+      color:#000000;
+      text-align: center;
+      font-size: 22px;
+  }
+  
+  .registerModal p{
+      height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .register-1{
+    width: 95%;
+    background: #D9D9D9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: none;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .register-1::placeholder{
+      color: #916CC1;
+  }
+  
+  .register-2{
+      
+      width: 100%;
+      border-radius: 5px;
+    background: #916CC1;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+  
+  .loginLink a{
+      color: #916CC1;
+  }
