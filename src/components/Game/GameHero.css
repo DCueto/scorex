@@ -1,0 +1,55 @@
+
+
+.gameHero .imgBackground{
+
+  width: 750px;
+  margin-top: -80px;
+  border-radius: 10px;
+  margin-left:30px
+
+  
+
+}
+
+.gameHero .NameGame{
+
+  transform: translateX(820px) translateY(30px);
+  font-weight: bold;
+  font-size:60px;
+  position: relative;
+  bottom: -0px;
+  
+
+  
+}
+
+.gameHero .NameId{
+
+  color: #F7F9FB;
+
+}
+
+
+
+.gameHero .NameMetacritic{
+
+transform: translateX(820px) translateY(30px);
+font-weight: bold;
+font-size:34px;
+position:relative;
+bottom: -150px;
+
+}
+
+.gameHero .NameMetacritic.square{
+
+  width: 100px;
+  height: 100px;
+  background: red;
+
+}
+
+
+
+
+
