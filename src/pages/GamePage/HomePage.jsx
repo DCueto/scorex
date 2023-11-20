@@ -13,11 +13,6 @@ function HomePage(){
       <SideNav />
       <main className="mainContainer">
         <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
-        <Carrousel />
         <Footer />
       </main>
     </>

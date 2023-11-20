@@ -7,7 +7,7 @@ function Header(){
     <header className='topNav'>
       <img className='logo-scorex' src={logo} />
       <input type="text" placeholder="Introduce tu busqueda"/>
-      <i class="fa-regular fa-user" style="color: #c180dd;">a</i>
+      <i id='btn' className="fa-solid fa-circle-user" ></i>
     </header>
   )
 }

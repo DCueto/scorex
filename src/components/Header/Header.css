@@ -18,9 +18,18 @@
 
 .topNav input[type="text"]{
   border: 0;
+  outline: none;
 }
 
-.topNav button{
+input::placeholder{
+  color: #B9CFDD;
+  font-family: Inter;
+}
+
+#btn{
+  cursor: pointer;
+  font-size: 30px;
+  color: #A6A6A6;
   position: absolute;
   right: 50px;
 }
