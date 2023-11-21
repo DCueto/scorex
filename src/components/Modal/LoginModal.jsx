@@ -4,13 +4,13 @@ const LoginModal = ({setLoginRegisterViewState}) => {
 
   return (
     <div className="loginModal">
-      <img className='logo' src={logo} />
-      <div className='log-h3'>
-        <h3>Register</h3>
-        <h3>Sign in</h3>
-      </div>
-      <hr />
       <form>
+        <img className='logo' src={logo} />
+        <div className='log-h3'>
+          <h3>Register</h3>
+          <h3>Sign in</h3>
+        </div>
+        <hr />
         <label className='login-3' >Email</label>
         <input className='login-1' type="text" placeholder="Introduce tu correo electrónico" />
         <label className='login-3' >Password</label>

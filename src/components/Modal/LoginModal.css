@@ -43,6 +43,8 @@ hr{
   font-family: 'calibri';
   font-size: 18px;
   color: rgb(0, 0, 0);
+  margin-top: 10px;
+
 }
 
 .login-1::placeholder{
@@ -50,9 +52,8 @@ hr{
 }
 
 .login-2{
-    
-    width: 100%;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
   background: #916CC1;
   border: none;
   padding: 12px;
@@ -63,4 +64,12 @@ hr{
 
 .registerLink a{
     color: #916CC1;
+}
+
+@media only screen and (max-width: 600px){
+  .loginModal{
+    margin-top: 100px;
+    margin-left: 40px;
+    box-shadow: none;
+  }
 }
