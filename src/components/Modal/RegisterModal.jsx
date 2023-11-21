@@ -1,7 +1,7 @@
 import ScoreXService from '../../services/ScoreXService';
 import { useEffect, useRef, useState } from 'react';
 import './RegisterModal.css';
-
+import logo from './../../assets/img/logo_full.svg';
 const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
 
   const scoreXService = new ScoreXService();
@@ -166,10 +166,11 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
 
   return (
     <div className="registerModal">
-      <h3>Register</h3>
-      <form onSubmit={handleRegister}>
 
-        <input type="text" value={username} onChange={handleInputUsername} placeholder="Introduce tu usuario" />
+      <form onSubmit={handleRegister}>
+      <img className='logo' src={logo} />
+      <label className='register-3'>User</label>
+        <input className='register-1' type="text" value={username} onChange={handleInputUsername} placeholder="Introduce tu usuario" />
         {userNotExists && username.length > 2 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>
@@ -182,8 +183,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           </p>
         : null
         }
-
-        <input type="email" value={email} onChange={handleInputEmail} placeholder="Introduce tu email" />
+        <label className='register-3' >Email</label>
+        <input className='register-1' type="email" value={email} onChange={handleInputEmail} placeholder="Introduce tu email" />
         {Object.entries(emailErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText 
             ${value && key === 'formatValidation' ? 'textValidationGreen' : !value && key === 'formatValidation' ? 'textValidationRed' : null}
@@ -197,8 +198,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           {!value && key === 'emailExists' ? 'Email is available' : value && key === 'emailExists' ? 'Email already exists' : null}
           </p>
         ))}
-
-        <input className="passwordInput" value={password} onChange={handleInputPassword} type="password" placeholder="Introduce tu constraseña" />
+        <label className='register-3' >Password</label>
+        <input className="passwordInput register-1" value={password} onChange={handleInputPassword} type="password" placeholder="Introduce tu constraseña" />
         {Object.entries(passwordErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText ${ value ? 'textValidationGreen' : 'textValidationRed'}`}>
             <i className={`fa-solid ${ value ? 'fa-check iconCorrect' : 'fa-xmark iconWrong'}`}></i>
@@ -208,8 +209,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
             {key === 'specialCharacterValidation' && 'Password must contain at least one special character'}
           </p>
         ))}
-
-        <input className="confirmPasswordInput" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Confirma tu constraseña" />
+        <label className='register-3' >Password</label>
+        <input className="confirmPasswordInput register-1" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Confirma tu constraseña" />
         {arePasswordsEqual && confirmPassword.length >= 8 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>
@@ -223,7 +224,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
         : null
         }
 
-        <input type="submit" value="Register" />
+        <input className='register-2' type="submit" value="Register" />
 
       </form>
       <div className="loginLink">

@@ -1,7 +1,7 @@
 import './LoginModal.css';
 import ScoreXService from '../../services/ScoreXService';
-import { useRef, useState } from 'react';
-
+import { useRef, useState } from 'react';import './LoginModal.css';
+import logo from './../../assets/img/logo_full.svg';
 const LoginModal = ({setLoginRegisterViewState}) => {
 
   const [formErrorMessage, setFormErrorMessage] = useState(null);
@@ -52,11 +52,14 @@ const LoginModal = ({setLoginRegisterViewState}) => {
 
   return (
     <div className="loginModal">
-      <h3>Login</h3>
+
       <form onSubmit={handleLogin}>
-        <input type="email" onBlur={handleInput} ref={emailInput} placeholder="Introduce tu email" required />
-        <input type="password" onBlur={handleInput} ref={passwordInput} placeholder="Introduce tu constraseña" required />
-        <input type="submit" value="Login" />
+        <img className='logo' src={logo} />
+        <label className='login-3' >Email</label>
+        <input type="email" className='login-1' onBlur={handleInput} ref={emailInput} placeholder="Introduce tu email" required />
+        <label className='login-3' >Email</label>
+        <input type="password" className='login-1' onBlur={handleInput} ref={passwordInput} placeholder="Introduce tu constraseña" required />
+        <input type="submit" className='login-2' value="Login" />
       </form>
 
       { formErrorMessage ? <p className='loginError'>{formErrorMessage}</p> : null}
