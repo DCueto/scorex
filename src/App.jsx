@@ -9,6 +9,7 @@ import LoginModal from './components/Modal/LoginModal';
 import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import RegisterModal from './components/Modal/RegisterModal';
+import LoginRegisterTabs from './components/Modal/LoginRegisterTabs';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -54,9 +55,10 @@ function App() {
   
       { isModalActive
       ? <Modal setModalState={handleModalState} >
+          <LoginRegisterTabs setLoginRegisterViewState={handleLoginRegisterState} />
           { logirOrRegister === 'login'
-          ? <LoginModal setLoginRegisterViewState={handleLoginRegisterState}/>
-          : logirOrRegister === 'register' ? <RegisterModal setLoginRegisterViewState={handleLoginRegisterState} />
+          ? <LoginModal setLoginRegisterViewState={handleLoginRegisterState} setModalState={handleModalState} />
+          : logirOrRegister === 'register' ? <RegisterModal setLoginRegisterViewState={handleLoginRegisterState} setModalState={handleModalState} />
           : null
           }
         </Modal>

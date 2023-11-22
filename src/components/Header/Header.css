@@ -26,9 +26,9 @@ input::placeholder{
   font-family: Inter;
 }
 
-#btn{
+.topNav .userIcon{
   cursor: pointer;
-  font-size: 30px;
+  font-size: 25px;
   color: #A6A6A6;
   position: absolute;
   right: 50px;

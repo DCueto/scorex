@@ -73,3 +73,13 @@ hr{
     box-shadow: none;
   }
 }
+
+
+.loginError{
+  background-color: darkred;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px 5px;

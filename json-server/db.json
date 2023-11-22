@@ -43,6 +43,70 @@
           "metacritic": 97
         }
       ]
+    },
+    {
+      "name": "",
+      "surname": "",
+      "username": "userTest",
+      "email": "usertest@test.com",
+      "password": "$Abcd1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [],
+      "id": 3
+    },
+    {
+      "name": "",
+      "surname": "",
+      "username": "userTest2",
+      "email": "user@test.com",
+      "password": "$User1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [],
+      "id": 4
+    },
+    {
+      "name": "",
+      "surname": "",
+      "username": "DCueto3",
+      "email": "dcueto14.info@gmail.comf",
+      "password": "$Abcd1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [],
+      "id": 5
+    },
+    {
+      "name": "",
+      "surname": "",
+      "username": "DCueto2",
+      "email": "dcueto14.info@gmail.com4",
+      "password": "$Abcd1234",
+      "preferences": [
+        {
+          "genres": []
+        }
+      ],
+      "following": [],
+      "followers": [],
+      "games_played": [],
+      "id": 6
     }
   ],
   "reviews": [
