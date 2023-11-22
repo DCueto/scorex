@@ -1,10 +1,10 @@
-
+import './footer.css'
 
 function Footer(){
   
   return <footer>
-    <div>
-      <p>Todos los derechos reservados.</p>
+    <div className="footerone">
+      <p> Todos los derechos reservados.</p>
     </div>
   </footer>
 }
