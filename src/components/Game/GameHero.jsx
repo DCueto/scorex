@@ -5,7 +5,7 @@ import GameImg from './GameImg';
 
 
         
-c
+
 
 
 
