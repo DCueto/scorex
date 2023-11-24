@@ -75,7 +75,37 @@ html{
   --radial-gradient-banner: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 58.33%, rgba(0, 0, 0, 0.444444) 83.33%, rgba(0, 0, 0, 0.36) 100%);
   --linear-gradient-review-image-full: linear-gradient(90deg, #272727 0%, rgba(31, 31, 31, 0.782216) 11.39%, rgba(0, 0, 0, 0) 30.8%);
   --linear-gradient-review-image-small: linear-gradient(90deg, #272727 0%, rgba(31, 31, 31, 0.782216) 11.39%, rgba(0, 0, 0, 0) 30.8%);
+
+
+  /* FONT SIZES */
+
+  --font-size-title-1: 48px;
+  --font-size-title-2: 40px;
+  --font-size-title-3: 36px;
+  --font-size-title-4: 20px;
+  --font-size-title-5: 16px;
+  --font-size-title-6: 12px;
+  --font-size-text-content: 16px;
+  --font-size-game-title: 48px;
+  --font-size-profile-name-title: 48px;
+  --font-size-brand-title: 40px;
+  --font-size-hero-score: 20px;
+  --font-size-game-slider-title: 36px;
+  --font-size-main-nav-item: 16px;
+  --font-size-nav-category: 12px;
+  --font-size-input-search: 16px;
+  --font-size-input-main: 14px;
+  --font-size-button-submit: 16px;
+  --font-size-login-tab-item: 20px;
+  --font-size-page-tab: 16px;
+  --font-size-carrousel-card-title: 12px;
+  --font-size-carrousel-card-score: 8px;
+  --font-size-link-more: 10px;
+  --font-size-review-card-text: 10px;
+  --font-size-review-card-user: 10px;
+  --font-size-review-card-date: 8px;
+  --font-size-review-card-score: 8x;
+  --font-size-tag: 11px;
+
+  
 }
-
-
-
