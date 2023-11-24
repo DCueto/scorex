@@ -8,6 +8,7 @@ import { useState,useEffect } from 'react';
 
 
 
+
 function GamePage(){
 
   const rawg = new RAWGService();
@@ -17,6 +18,7 @@ function GamePage(){
   
       rawg.searchGame(3498).then( fetchData => {
         setData(fetchData);
+        console.log(fetchData);
       });
   
     }, []);
@@ -24,12 +26,12 @@ function GamePage(){
   
   return (
      <>
-          <Header />
-          <SideNav /> 
-          <main className="gamePage">
+          
+          
+          <section className="gamePage">
           <GameHero data={data}/>
           <Footer />
-          </main> 
+          </section> 
     </>
   )
 }

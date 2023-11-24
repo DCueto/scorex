@@ -1,6 +1,6 @@
 
 
-function GameImg({title,  metascore, img}){
+function GameImg({title,  metascore, img, }){
 
     return (
         <article className="carrouselCard">

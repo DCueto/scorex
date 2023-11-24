@@ -1,27 +1,121 @@
 
 
-.gameHero .imgBackground{
-
-  width: 750px;
-  margin-top: -80px;
-  border-radius: 10px;
-  margin-left:30px
+.gameHero{
+  display:flex; 
+  box-shadow: 10px 5px 5px grey;
+  border-radius:10px;
 
   
 
 }
+.gameHero .imgBackground{
+  
+  width: 750px;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-left:-80px
+
+}
+
 
 .gameHero .NameGame{
-
-  transform: translateX(820px) translateY(30px);
+  width: 500px;
+  margin-top:30px;
+  margin-left:20px;
+  flex-direction:row;
   font-weight: bold;
-  font-size:60px;
-  position: relative;
-  bottom: -0px;
+  font-size:30px;
+ 
+
+}
+
+
+.gameHero .PlatformsAny{
+  flex-direction:row;
+  margin-left:-500px;
+  margin-top:100px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gameHero .Releaseday{
+margin-left:-74px;
+flex-direction:row;
+font-size:14px;
+font-weight: bold;
+margin-top:160px;
+ }
   
 
-  
+
+ 
+.gameHero .NameMetacritic{
+  display: flex;
+  flex-direction:column; 
+  margin-left:-160px;
+  margin-top:200px;
+  width: 50px;
+  height: 50px;
+  background-color: #00ABA0;
+  padding: 10px;
+  border-radius:4px;
+  font-weight:bold;
+  font-size:20px;
 }
+
+.NumberMeta{
+  display: flex;
+  font-size: 28px;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+  }
+
+.gameHero .NameMetacritic .nameMeta{
+  margin-left:-10px;
+  margin-top:48px;  
+  font-weight:bold;
+  font-size:14px;
+}
+
+
+
+.gameHero .NameRatings{
+  display: flex;
+  flex-direction:column; 
+  margin-left:60px;
+  margin-top:200px;
+  width: 70px;
+  height: 50px;
+  background-color: #00ABA0;
+  padding: 10px;
+  border-radius:4px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+
+
+
+.gameHero .NameRatings .nameRating{
+  margin-left:10px;
+  margin-top:48px;  
+  font-weight:bold;
+  font-size:14px;
+  }
+
+  .GenresName{
+
+  margin-top:350px;
+  margin-left:-220px;
+  font-weight:bold;
+  font-size:14px;
+
+}
+
 
 .gameHero .NameId{
 
@@ -30,26 +124,11 @@
 }
 
 
+.gameHero  .platformsone{
 
-.gameHero .NameMetacritic{
+  font-size:104px;
 
-transform: translateX(820px) translateY(30px);
-font-weight: bold;
-font-size:34px;
-position:relative;
-bottom: -150px;
-
+   
 }
-
-.gameHero .NameMetacritic.square{
-
-  width: 100px;
-  height: 100px;
-  background: red;
-
-}
-
-
-
 
 
