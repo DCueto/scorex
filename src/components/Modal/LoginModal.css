@@ -1,57 +1,37 @@
-.loginModal{
-  width: 400px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.71);
-  padding: 30px;
-  margin: auto;
-  color: rgb(0, 0, 0);
-  box-shadow: 7px 13px 37px #000;
-}
-.logo{
-    margin-left: 30%;
-    width: 40%;
-    margin-bottom: 20px;
-}
-hr{
-    margin-bottom: 20px;
-    height: 1px;
-    background: #000;
-    border: none;
-}
 
-.log-h3{
-    display: flex;
-    justify-content: space-around;
-    color:#000000;
-    text-align: center;
-    font-size: 22px;
-}
 
 .loginModal p{
-    height: 40px;
+  height: 40px;
   text-align: center;
   font-size: 18px;
   line-height: 40px;
 }
-.login-1{
+
+.loginLabel{
+  font-size: 18px;
+  margin-top: 10px;
+  display: block;
+}
+
+.loginInput{
   width: 95%;
   background: #D9D9D9;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 16px;
   border: none;
-  font-family: 'calibri';
-  font-size: 18px;
+  font-family: Inter;
+  font-size: 16px;
   color: rgb(0, 0, 0);
   margin-top: 10px;
 
 }
 
-.login-1::placeholder{
+.loginInput::placeholder{
     color: #916CC1;
 }
 
-.login-2{
+.loginSubmit{
   width: 100%;
   border-radius: 5px;
   background: #916CC1;
@@ -66,14 +46,6 @@ hr{
     color: #916CC1;
 }
 
-@media only screen and (max-width: 600px){
-  .loginModal{
-    margin-top: 100px;
-    margin-left: 40px;
-    box-shadow: none;
-  }
-}
-
 
 .loginError{
   background-color: darkred;
@@ -83,3 +55,13 @@ hr{
   width: 50%;
   margin: 10px auto;
   padding: 10px 5px;
+}
+
+
+@media only screen and (max-width: 600px){
+  .loginModal{
+    margin-top: 100px;
+    margin-left: 40px;
+    box-shadow: none;
+  }
+}

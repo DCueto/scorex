@@ -1,7 +1,6 @@
 import ScoreXService from '../../services/ScoreXService';
 import { useEffect, useRef, useState } from 'react';
 import './RegisterModal.css';
-import logo from './../../assets/img/logo_full.svg';
 const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
 
   const scoreXService = new ScoreXService();
@@ -166,11 +165,9 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
 
   return (
     <div className="registerModal">
-
       <form onSubmit={handleRegister}>
-      <img className='logo' src={logo} />
-      <label className='register-3'>User</label>
-        <input className='register-1' type="text" value={username} onChange={handleInputUsername} placeholder="Introduce tu usuario" />
+      <label className='registerLabel'>User</label>
+        <input className='registerInput' type="text" value={username} onChange={handleInputUsername} placeholder="Introduce tu usuario" />
         {userNotExists && username.length > 2 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>
@@ -183,8 +180,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           </p>
         : null
         }
-        <label className='register-3' >Email</label>
-        <input className='register-1' type="email" value={email} onChange={handleInputEmail} placeholder="Introduce tu email" />
+        <label className='registerLabel' >Email</label>
+        <input className='registerInput' type="email" value={email} onChange={handleInputEmail} placeholder="Introduce tu email" />
         {Object.entries(emailErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText 
             ${value && key === 'formatValidation' ? 'textValidationGreen' : !value && key === 'formatValidation' ? 'textValidationRed' : null}
@@ -198,8 +195,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           {!value && key === 'emailExists' ? 'Email is available' : value && key === 'emailExists' ? 'Email already exists' : null}
           </p>
         ))}
-        <label className='register-3' >Password</label>
-        <input className="passwordInput register-1" value={password} onChange={handleInputPassword} type="password" placeholder="Introduce tu constraseña" />
+        <label className='registerLabel' >Password</label>
+        <input className="passwordInput registerInput" value={password} onChange={handleInputPassword} type="password" placeholder="Introduce tu constraseña" />
         {Object.entries(passwordErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText ${ value ? 'textValidationGreen' : 'textValidationRed'}`}>
             <i className={`fa-solid ${ value ? 'fa-check iconCorrect' : 'fa-xmark iconWrong'}`}></i>
@@ -209,8 +206,8 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
             {key === 'specialCharacterValidation' && 'Password must contain at least one special character'}
           </p>
         ))}
-        <label className='register-3' >Password</label>
-        <input className="confirmPasswordInput register-1" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Confirma tu constraseña" />
+        <label className='registerLabel' >Confirm Password</label>
+        <input className="confirmPasswordInput registerInput" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Confirma tu constraseña" />
         {arePasswordsEqual && confirmPassword.length >= 8 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>
@@ -224,12 +221,9 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
         : null
         }
 
-        <input className='register-2' type="submit" value="Register" />
+        <input className='registerSubmit' type="submit" value="Register" />
 
       </form>
-      <div className="loginLink">
-        <p>Ya tienes una cuenta? <a onClick={ () => setLoginRegisterViewState("login")}>Haz Login</a></p>
-      </div>
     </div>
   )
 }

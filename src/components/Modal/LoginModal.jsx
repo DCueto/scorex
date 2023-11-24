@@ -1,7 +1,6 @@
 import './LoginModal.css';
 import ScoreXService from '../../services/ScoreXService';
 import { useRef, useState } from 'react';import './LoginModal.css';
-import logo from './../../assets/img/logo_full.svg';
 const LoginModal = ({setLoginRegisterViewState}) => {
 
   const [formErrorMessage, setFormErrorMessage] = useState(null);
@@ -52,21 +51,15 @@ const LoginModal = ({setLoginRegisterViewState}) => {
 
   return (
     <div className="loginModal">
-
       <form onSubmit={handleLogin}>
-        <img className='logo' src={logo} />
-        <label className='login-3' >Email</label>
-        <input type="email" className='login-1' onBlur={handleInput} ref={emailInput} placeholder="Introduce tu email" required />
-        <label className='login-3' >Email</label>
-        <input type="password" className='login-1' onBlur={handleInput} ref={passwordInput} placeholder="Introduce tu constraseña" required />
-        <input type="submit" className='login-2' value="Login" />
-      </form>
+        <label className='loginLabel' >Email</label>
+        <input type="email" className='loginInput' onBlur={handleInput} ref={emailInput} placeholder="Introduce tu email" required />
+        <label className='loginLabel' >Email</label>
+        <input type="password" className='loginInput' onBlur={handleInput} ref={passwordInput} placeholder="Introduce tu constraseña" required />
+        <input type="submit" className='loginSubmit' value="Login" />
 
-      { formErrorMessage ? <p className='loginError'>{formErrorMessage}</p> : null}
-  
-      <div className="registerLink">
-        <p>¿No tienes una cuenta? <a onClick={() => setLoginRegisterViewState("register")}>Regístrate</a></p>
-      </div>
+        { formErrorMessage ? <p className='loginError'>{formErrorMessage}</p> : null}
+      </form>
     </div>
   )
 }

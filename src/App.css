@@ -1,6 +1,9 @@
+@import url('./styles/globalStyles.css');
+
 :root {
-  background-color: #F7F9FB;
+  background-color: var(--bg-color-main-dark);
   font-family: Inter;
+  color: white;
 }
 
 #root{
@@ -16,7 +19,7 @@
   font-size: 24px;
   margin: .5rem 0;
   font-weight: 600;
-  color: #242424;
+  color: white;
 }
 
 #app{
@@ -26,7 +29,7 @@
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-columns: 20% 80%;
-  grid-template-areas: "topNav topNav" "leftNav main";
+  grid-template-areas: "leftNav topNav" "leftNav main";
 }
 
 #app .mainContainer{
