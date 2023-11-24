@@ -11,6 +11,8 @@ import { useEffect, useState } from 'react';
 import RegisterModal from './components/Modal/RegisterModal';
 import LoginRegisterTabs from './components/Modal/LoginRegisterTabs';
 
+import logo from './assets/img/logo_full.svg';
+
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [isSearching, setIsSearching] = useState(false);
@@ -55,6 +57,7 @@ function App() {
   
       { isModalActive
       ? <Modal setModalState={handleModalState} >
+          <img className='logo' src={logo} />
           <LoginRegisterTabs setLoginRegisterViewState={handleLoginRegisterState} />
           { logirOrRegister === 'login'
           ? <LoginModal setLoginRegisterViewState={handleLoginRegisterState} setModalState={handleModalState} />
