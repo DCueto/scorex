@@ -1,0 +1,81 @@
+
+html{
+
+  /* BACKGROUND COLORS*/
+
+  --bg-color-main-dark: #1D1E20;
+  --bg-color-main-dark-alt: #1B1E1F;
+  --bg-color-card-main: #5DCB82;
+  --bg-color-card-alt: #283537;
+  --bg-color-opt1: #283537;
+  --bg-color-opt2: #A9A9A9;
+  --bg-color-op3: #3C3348;
+
+
+  /* METACRITIC COLORS */
+
+  --mc-color-top: #916CC1;
+  --mc-color-good: #5DCB82;
+  --mc-color-medium: #C99838;
+  --mc-color-bad: #FE6873;
+
+
+  /* FONT COLORS */
+
+  --font-color-scorex: #916CC1;
+  --font-color-white: white;
+  --font-color-lighter: #E6E6E6;
+  --font-color-light: #D9D7D7;
+  --font-color-purple-gray: #AA9AA7;
+  --font-color-gray: #676767;
+  --font-color-lightgray: #D2CECE;
+  --font-color-gray-off: #9A9A9A;
+  --font-color-gray-span: #808080;
+  --font-color-green-correct: #5DCB82;
+  --font-color-red-wrong: #FE6873;
+
+
+  /* SCOREX MAIN COLORS */
+
+  --scorex-color-main-1:#916CC1;
+  --scorex-color-main-2:#9D7CC2;
+  --scorex-color-main-3:#1D1E20;
+  --scorex-color-main-4:#272727;
+
+
+  /* BUTTON COLORS */
+
+  --button-color-scorex: #916CC1;
+  --button-color-scorex-alt: #9D7CC2;
+  --button-color-alt-1: #1D1E20;
+  --button-color-alt-2: #969696;
+  --button-color-alt-3: #283537;
+  --button-color-category-1: #324251;
+  --button-color-carrousel-arrows: #A9A9A9;
+  --button-color-hero-slider: rgba(255, 255, 255, .40);
+
+
+  /* INPUT COLORS */
+
+  --input-color-search: rgba(79, 79, 79, .66);
+  --input-color-main: rgba(60, 51, 72, .80);
+
+  /* TRANSPARENCY SPAN COLORS */
+
+  --transparency-span-color-top: rgba(145, 108, 193, .85);
+  --transparency-span-color-good: rgba(93, 203, 130, .85);
+  --transparency-span-color-medium: rgba(201, 152, 56, .85);
+  --transparency-span-color-bad: rgba(254, 104, 115, .85);
+  
+
+
+  /* GRADIENTS */
+
+  --linear-gradient-banner: linear-gradient(180deg, rgba(0, 0, 0, 0) 32.81%, #1D1E20 100%);
+  --radial-gradient-banner: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 58.33%, rgba(0, 0, 0, 0.444444) 83.33%, rgba(0, 0, 0, 0.36) 100%);
+  --linear-gradient-review-image-full: linear-gradient(90deg, #272727 0%, rgba(31, 31, 31, 0.782216) 11.39%, rgba(0, 0, 0, 0) 30.8%);
+  --linear-gradient-review-image-small: linear-gradient(90deg, #272727 0%, rgba(31, 31, 31, 0.782216) 11.39%, rgba(0, 0, 0, 0) 30.8%);
+}
+
+
+
