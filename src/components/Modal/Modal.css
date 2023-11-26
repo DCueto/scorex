@@ -7,7 +7,7 @@
 
 .modalBg{
   position: absolute;
-  z-index: 20;
+  z-index: 200;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   height: 100vh;
@@ -17,7 +17,7 @@
 }
 .modalContainer{
   position: absolute;
-  z-index: 30;
+  z-index: 201;
   border-radius: 10px;
   width: 50vw;
   height: 70vh;

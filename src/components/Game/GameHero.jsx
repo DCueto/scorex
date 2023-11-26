@@ -5,7 +5,6 @@ import GameImg from './GameImg';
 
 
 
-
 function GameHero({data}){
 
     return (

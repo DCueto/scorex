@@ -1,6 +1,7 @@
 .carrousel{
   overflow: hidden;
   position: relative;
+  margin: 20px 0;
 }
 
 .carrousel .carrouselButtons{
@@ -35,12 +36,12 @@
 
 .carrouselGradient.leftGradient{
   left: 0;
-  background: linear-gradient(270deg,hsla(0,0%,100%,0),#F7F9FB 28px,#F7F9FB);
+  background: linear-gradient(270deg,hsla(0,0%,100%,0),#1D1E20 28px,#1D1E20);
 }
 
 .carrouselGradient.rightGradient{
   right: 0;
-  background: linear-gradient(90deg,hsla(0,0%,100%,0),#F7F9FB 28px,#F7F9FB);
+  background: linear-gradient(90deg,hsla(0,0%,100%,0),#1D1E20 28px,#1D1E20);
 }
 
 .none{

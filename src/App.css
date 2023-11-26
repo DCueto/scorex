@@ -35,6 +35,111 @@
 #app .mainContainer{
   grid-area: main;
   overflow-y: scroll;
-  padding: 20px 30px;
+  padding: 70px 30px;
   padding-bottom: 100px;
+  margin-top: -50px;
+}
+
+
+@media screen and (min-width: 1250px){
+  #app{
+    grid-template-columns: 250px calc(100% - 250px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #app{
+    grid-template-columns: 80px calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #app{
+    grid-template-columns: 100%;
+    grid-template-areas: "topNav" "main";
+    grid-template-rows: 50px calc(100vh-50px);
+  }
+
+  #app .sideNav{
+    transform: translateX(-100vw);
+    transition: transform 1s;
+    max-width: none;
+    position: fixed;
+    width: 100vw;
+  }
+
+  #app .sideNav.sideNavOpen{
+    transform: translate(0);
+  }
+
+  #app .sideNav.sideNav .closeSideNavIcon{
+    display: inline-block;
+  }
+
+  #app .sideNav .logo-scorex{
+    margin: 20px 20px;
+  }
+
+  #app .sideNav ul li{
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  #app .sideNav ul li span{
+    display: inline-block;
+  }
+
+
+  #app .topNav{
+    padding: 0 30px;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  #app .topNav input[type="text"]{
+    margin-left: 0;
+    width: 10%;
+  }
+
+  #app .topNav input[type="text"]:focus{
+    width: 100%;
+  }
+
+  #app .topNav .userIcon{
+    position: static;
+  }
+
+  #app .topNav .burgerMenuIcon{
+    display: inline-block;
+  }
+
+  #app .topNav .logo-scorex-s{
+    display: block;
+  }
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-main-dark);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-op3);
 }

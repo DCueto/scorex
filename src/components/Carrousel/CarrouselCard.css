@@ -4,7 +4,7 @@
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 0px 3px gray;
+  box-shadow: 0 0 5px rgba(96, 96, 96, .25);
   cursor: pointer;
 }
 
@@ -26,16 +26,15 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  filter: blur(7px);
+  /* filter: blur(7px); */
 }
-
 
 .carrouselCard .carrouselCardInfo{
   height: 20%;
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: white;
+  background-color: var(--bg-color-card-main);
   position: relative;
   border-radius: 10px;
 }
@@ -43,7 +42,6 @@
 .carrouselCardInfo span{
   height: 30px;
   width: 30px;
-  background-color: #00ABA0;
   border-radius: 5px;
   margin-left: 10px;
   flex-shrink: 0;
@@ -60,4 +58,31 @@
   margin-right: 10px;
   font-size: 14px;
   font-weight: 600;
+}
+
+.carrouselCardInfo p, .carrouselCardInfo span{
+  margin-top: -10px;
+}
+
+.carrouselCardInfo .cardScoreColor{
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.scoreTop{
+  background-color: var(--mc-color-top);
+}
+
+.scoreGood{
+  background-color: var(--mc-color-good);
+}
+
+.scoreMedium{
+  background-color: var(--mc-color-medium);
+}
+
+.scoreBad{
+  background-color: var(--mc-color-bad);
 }

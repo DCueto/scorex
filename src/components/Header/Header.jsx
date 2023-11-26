@@ -1,8 +1,8 @@
 import './Header.css';
-import logo from './../../assets/img/logo_full.svg';
+import logoIcon from './../../assets/img/logo_s.svg';
 import { useState } from 'react';
 
-function Header({sendInputValue, isSearching, setModalState}){
+function Header({sendInputValue, isSearching, setModalState, setSideNavState}){
   const [userLogged, setUserLogged] = useState(JSON.parse(window.localStorage.getItem('user')));
 
   function handleSearchSubmit(e){
@@ -24,7 +24,8 @@ function Header({sendInputValue, isSearching, setModalState}){
 
   return (
     <header className='topNav'>
-      <img className='logo-scorex' src={logo} />
+      <i className="fa-solid fa-bars-staggered burgerMenuIcon" onClick={() => setSideNavState(true)} ></i>
+      <img className='logo-scorex-s' src={logoIcon}></img>
       <input type="text" placeholder="Introduce tu busqueda" onKeyDown={handleSearchSubmit} onChange={handleSearchState}/>
       <i className="fa-regular fa-user userIcon" onClick={() => setModalState(true)}></i>
     </header>
