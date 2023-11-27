@@ -17,6 +17,7 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const [logirOrRegister, setLoginOrRegister] = useState('login');
   const scoreXService = new ScoreXService();
 
@@ -44,16 +45,22 @@ function App() {
     setLoginOrRegister(value);
   }
 
+  function handleSideNavState(value){
+    setIsSideNavOpen(value);
+  }
+
   return (
     <div id="app">
-      <Header sendInputValue={handleInputValue} isSearching={handleSearchState} setModalState={handleModalState}/>
-      <SideNav />
-      <main className="mainContainer">
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header sendInputValue={handleInputValue} isSearching={handleSearchState} 
+          setModalState={handleModalState} 
+          setSideNavState={handleSideNavState}/>
+        <SideNav sideNavState={isSideNavOpen} setSideNavState={handleSideNavState}/>
+        <main className="mainContainer">
           <Router inputValue={inputValue} isSearching={isSearching} />
-        </BrowserRouter>
-        <Footer />
-      </main>
+          <Footer />
+        </main>
+      </BrowserRouter>
   
       { isModalActive
       ? <Modal setModalState={handleModalState} >

@@ -1,0 +1,2 @@
+import './GamePageInfoTab.css';
+

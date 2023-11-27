@@ -5,8 +5,8 @@ html{
 
   --bg-color-main-dark: #1D1E20;
   --bg-color-main-dark-alt: #1B1E1F;
-  --bg-color-card-main: #5DCB82;
-  --bg-color-card-alt: #283537;
+  --bg-color-card-main: #283537;
+  --bg-color-card-alt: #272727;
   --bg-color-opt1: #283537;
   --bg-color-opt2: #A9A9A9;
   --bg-color-op3: #3C3348;
@@ -27,6 +27,7 @@ html{
   --font-color-lighter: #E6E6E6;
   --font-color-light: #D9D7D7;
   --font-color-purple-gray: #AA9AA7;
+  --font-color-nav-items: #AA9AA7;
   --font-color-gray: #676767;
   --font-color-lightgray: #D2CECE;
   --font-color-gray-off: #9A9A9A;
@@ -77,6 +78,10 @@ html{
   --linear-gradient-review-image-small: linear-gradient(90deg, #272727 0%, rgba(31, 31, 31, 0.782216) 11.39%, rgba(0, 0, 0, 0) 30.8%);
 
 
+  /* BOX SHADOWS */
+
+  --shadow-left-nav: 4px 0 4px rgba(0,0,0,.2);
+
   /* FONT SIZES */
 
   --font-size-title-1: 48px;
@@ -107,5 +112,5 @@ html{
   --font-size-review-card-score: 8x;
   --font-size-tag: 11px;
 
-  
+
 }

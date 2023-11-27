@@ -1,0 +1,110 @@
+
+.sliderGames{
+  width: 100%;
+  height: 285px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderGames .sliderGamesContainer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sliderGamesSwipper{
+  width: auto;
+  height: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 70px;
+  z-index: 25;
+}
+
+.sliderGamesSwipper .btnSlider{
+  position: absolute;
+  top: -3px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .4);
+  cursor: pointer;
+}
+
+.sliderGamesSwipper .btnSlider:hover{
+  color: white;
+  transform: scale(1.4);
+}
+
+.sliderGamesSwipper .iconLeft{
+  left: -25px;
+}
+
+.sliderGamesSwipper .iconRight{
+  right: -25px;
+}
+
+
+.sliderGamesSwipper .circleButtons{
+  display: flex;
+  gap: 12px;
+}
+
+.sliderGamesSwipper .circleButtons .circleBtn{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--button-color-alt-2);
+  cursor: pointer;
+}
+
+.sliderGamesSwipper .circleButtons .circleBtn.activeCircleBtn{
+  background-color: var(--scorex-color-main-1);
+}
+
+
+
+.sliderGamesSwipper .circleButtons .circleBtn:hover{
+  transform: scale(1.5);
+}
+
+.sliderGames .sliderGamesContainer .slideGame{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.sliderGames .sliderGamesContainer .slideGame.activeSlide{
+  z-index: 10;
+}
+
+.sliderGames .sliderGamesContainer .slideGame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(29, 30, 32, 0) 43.23%, rgba(29, 30, 32, 0.1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 59.37%, rgba(9, 10, 10, 0.45) 78.12%, rgba(16, 17, 18, 0.7) 87.5%, #1D1E20 100%);
+}
+
+.sliderGames .sliderGamesContainer .slideGame h4{
+  position: absolute;
+  bottom: 55px;
+  left: 45px;
+  color: var(--font-color-lighter);
+  font-weight: 500;
+  z-index: 15;
+  font-size: 36px;
+}
+
+
+.sliderGradient{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(29, 30, 32, 0) 43.23%, rgba(29, 30, 32, 0.1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 32.81%, #1D1E20 100%);
+  /* background: radial-gradient(50% 50% at 50% 50%, rgba(29, 30, 32, 0) 43.23%, rgba(29, 30, 32, 0.1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 59.37%, rgba(9, 10, 10, 0.45) 78.12%, rgba(16, 17, 18, 0.7) 87.5%, #1D1E20 100%); */
+}

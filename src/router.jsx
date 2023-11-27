@@ -8,7 +8,7 @@ function Router({inputValue, isSearching}){
   return (
   <Routes>
     <Route path="/" element={<HomePage inputValue={inputValue} isSearching={isSearching} />} />
-    <Route path="/game" element={<GamePage />} />
+    <Route path="/game/:gameId" element={<GamePage />} />
   </Routes>
   )
 }

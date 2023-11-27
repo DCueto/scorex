@@ -1,0 +1,17 @@
+
+.gameSummary{
+  font-size: 16px;
+}
+
+.gameSummary h6{
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.gameSummary p{
+  color: var(--font-color-lightgray);
+  line-height: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}

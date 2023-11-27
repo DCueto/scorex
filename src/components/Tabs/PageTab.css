@@ -1,0 +1,22 @@
+.pageTab{
+  font-size: var(--font-size-page-tab);
+  color: var(--font-color-gray-off);
+  cursor: pointer;
+}
+
+.pageTab p{
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.pageTab.activePageTab{
+  color: white;
+}
+
+.pageTab.activePageTab .pageTabUnderline{
+  width: 90%;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 1px;
+  background-color: var(--scorex-color-main-1);
+}
