@@ -51,16 +51,16 @@ function App() {
 
   return (
     <div id="app">
-      <Header sendInputValue={handleInputValue} isSearching={handleSearchState} 
-        setModalState={handleModalState} 
-        setSideNavState={handleSideNavState}/>
-      <SideNav sideNavState={isSideNavOpen} setSideNavState={handleSideNavState}/>
-      <main className="mainContainer">
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header sendInputValue={handleInputValue} isSearching={handleSearchState} 
+          setModalState={handleModalState} 
+          setSideNavState={handleSideNavState}/>
+        <SideNav sideNavState={isSideNavOpen} setSideNavState={handleSideNavState}/>
+        <main className="mainContainer">
           <Router inputValue={inputValue} isSearching={isSearching} />
-        </BrowserRouter>
-        <Footer />
-      </main>
+          <Footer />
+        </main>
+      </BrowserRouter>
   
       { isModalActive
       ? <Modal setModalState={handleModalState} >

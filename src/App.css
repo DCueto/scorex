@@ -10,16 +10,21 @@
   font-size: 1.3rem;
 }
 
-#root h1{
+h1{
   font-size: 2rem;
   margin: 1rem 0;
 }
 
-#root h2{
+h2{
   font-size: 24px;
   margin: .5rem 0;
   font-weight: 600;
   color: white;
+}
+
+#root a{
+  text-decoration: none;
+  color: inherit;
 }
 
 #app{

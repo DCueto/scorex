@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './CarrouselCard.css';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 function CarrouselCard({title, src, metascore, id}){
 
@@ -10,9 +11,14 @@ function CarrouselCard({title, src, metascore, id}){
     bad: parseInt(metascore) <= 49 && parseInt(metascore) >= 0
   });
 
+  const navigate = useNavigate();
+
+  const handleNavigateToGame = () => {
+    navigate(`/game/${id}`);
+  }
 
   return (
-    <article data-id={id} className="carrouselCard">
+    <article data-id={id} className="carrouselCard" onClick={handleNavigateToGame} >
       <div className="img">
         <img className="imgBlur" src={src} />
         {/* <img className="imgCover" src={src} /> */}

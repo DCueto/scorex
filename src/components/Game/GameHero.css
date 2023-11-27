@@ -1,134 +1,36 @@
 
-
 .gameHero{
-  display:flex; 
-  box-shadow: 10px 5px 5px grey;
-  border-radius:10px;
-
-  
-
-}
-.gameHero .imgBackground{
-  
-  width: 750px;
-  margin-top: 10px;
-  border-radius: 10px;
-  margin-left:-80px
-
+  height: 430px;
+  width: 100%;
+  position: relative;
+  z-index: 20;
 }
 
-
-.gameHero .NameGame{
-  width: 500px;
-  margin-top:30px;
-  margin-left:20px;
-  flex-direction:row;
-  font-weight: bold;
-  font-size:30px;
- 
-
+.gameHero .gameHeroImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.gameHero .PlatformsAny{
-  flex-direction:row;
-  margin-left:-500px;
-  margin-top:100px;
-  font-size: 14px;
-  font-weight: bold;
+.gameHero .gameHeroInfo{
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  z-index: 12;
 }
 
-.gameHero .Releaseday{
-margin-left:-74px;
-flex-direction:row;
-font-size:14px;
-font-weight: bold;
-margin-top:160px;
- }
-  
-
-
- 
-.gameHero .NameMetacritic{
-  display: flex;
-  flex-direction:column; 
-  margin-left:-160px;
-  margin-top:200px;
-  width: 50px;
-  height: 50px;
-  background-color: #00ABA0;
-  padding: 10px;
-  border-radius:4px;
-  font-weight:bold;
-  font-size:20px;
+.gameHero .gameHeroInfo h1{
+  font-size: 48px;
+  font-weight: 600;
+  margin: 20px 0;
 }
 
-.NumberMeta{
-  display: flex;
-  font-size: 28px;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  color:white;
-
-  }
-
-.gameHero .NameMetacritic .nameMeta{
-  margin-left:-10px;
-  margin-top:48px;  
-  font-weight:bold;
-  font-size:14px;
+.gameHero .gameHeroInfo h2{
+  font-size: 40px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: var(--scorex-color-main-1);
 }
-
-
-
-.gameHero .NameRatings{
-  display: flex;
-  flex-direction:column; 
-  margin-left:60px;
-  margin-top:200px;
-  width: 70px;
-  height: 50px;
-  background-color: #00ABA0;
-  padding: 10px;
-  border-radius:4px;
-  font-weight:bold;
-  font-size:20px;
-}
-
-
-
-
-.gameHero .NameRatings .nameRating{
-  margin-left:10px;
-  margin-top:48px;  
-  font-weight:bold;
-  font-size:14px;
-  }
-
-  .GenresName{
-
-  margin-top:350px;
-  margin-left:-220px;
-  font-weight:bold;
-  font-size:14px;
-
-}
-
-
-.gameHero .NameId{
-
-  color: #F7F9FB;
-
-}
-
-
-.gameHero  .platformsone{
-
-  font-size:104px;
-
-   
-}
-
-

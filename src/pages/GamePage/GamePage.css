@@ -1,0 +1,18 @@
+
+.gamePage h6{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.basicInfoGamePageTab{
+  display: flex;
+}
+
+.gamePageCol1{
+  width: 60%;
+}
+
+.gamePageCol2{
+  margin-left: 3vw;
+  width: 40%;
+}
