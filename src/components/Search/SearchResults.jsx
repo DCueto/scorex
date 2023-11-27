@@ -7,7 +7,7 @@ function SearchResults({results}){
     <h2>Results:</h2>
     <div className='searchResultsContainer'>
       {
-        results.map( item => <SearchCard key={item.id} title={item.name} src={item.background_image} metascore={item.metacritic} /> )
+        results.map( item => <SearchCard key={item.id} title={item.name} src={item.background_image} metascore={item.metacritic} date={item.released} /> )
       
       }
     </div>

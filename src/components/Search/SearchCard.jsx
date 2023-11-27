@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import './SearchCard.css';
 
-function SearchCard({title, src, metascore}){
+function SearchCard({title, src, metascore, date}){
 
 
   return (
@@ -10,8 +11,10 @@ function SearchCard({title, src, metascore}){
         <img className="imgCover" src={src} />
       </div>
       <div className="searchCardInfo">
-        <span>{metascore}</span>
-        <p>{title}</p>
+        <p id='title'>{title}</p>
+        <p id='date'>{date}</p>
+        <span
+          >{metascore}</span>
       </div>
     </article>
   )

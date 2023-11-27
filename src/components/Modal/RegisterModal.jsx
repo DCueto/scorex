@@ -167,7 +167,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
     <div className="registerModal">
       <form onSubmit={handleRegister}>
       <label className='registerLabel'>User</label>
-        <input className='registerInput' type="text" value={username} onChange={handleInputUsername} placeholder="Introduce tu usuario" />
+        <input className='registerInput' type="text" value={username} onChange={handleInputUsername} placeholder="Create Username" />
         {userNotExists && username.length > 2 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>
@@ -181,7 +181,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
         : null
         }
         <label className='registerLabel' >Email</label>
-        <input className='registerInput' type="email" value={email} onChange={handleInputEmail} placeholder="Introduce tu email" />
+        <input className='registerInput' type="email" value={email} onChange={handleInputEmail} placeholder="example@gmail.com" />
         {Object.entries(emailErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText 
             ${value && key === 'formatValidation' ? 'textValidationGreen' : !value && key === 'formatValidation' ? 'textValidationRed' : null}
@@ -196,7 +196,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           </p>
         ))}
         <label className='registerLabel' >Password</label>
-        <input className="passwordInput registerInput" value={password} onChange={handleInputPassword} type="password" placeholder="Introduce tu constraseña" />
+        <input className="passwordInput registerInput" value={password} onChange={handleInputPassword} type="password" placeholder="Create password" />
         {Object.entries(passwordErrors).map(([key, value]) => (
           <p key={key} className={`passwordValidationText ${ value ? 'textValidationGreen' : 'textValidationRed'}`}>
             <i className={`fa-solid ${ value ? 'fa-check iconCorrect' : 'fa-xmark iconWrong'}`}></i>
@@ -207,7 +207,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
           </p>
         ))}
         <label className='registerLabel' >Confirm Password</label>
-        <input className="confirmPasswordInput registerInput" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Confirma tu constraseña" />
+        <input className="confirmPasswordInput registerInput" onChange={handleInputConfirmPassword} value={confirmPassword} type="password" placeholder="Repeat password" />
         {arePasswordsEqual && confirmPassword.length >= 8 ?
           <p className='passwordValidationText textValidationGreen'>
             <i className='fa-solid fa-check iconCorrect'></i>

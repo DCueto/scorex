@@ -1,15 +1,11 @@
-
 .logo{
   margin-left: 30%;
   width: 40%;
   margin-bottom: 20px;
 }
-
 .modalBg{
   position: absolute;
   z-index: 200;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
   height: 100vh;
   width: 100vw;
   top: 0;
@@ -18,7 +14,7 @@
 .modalContainer{
   position: absolute;
   z-index: 201;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 50vw;
   height: 70vh;
   top: 50vh;
@@ -26,10 +22,12 @@
   margin-top: -45vh;
   margin-left: -25vw;
   padding: 30px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(27, 30, 31, 0.9);
+  backdrop-filter: blur(8px);
   color: rgb(0, 0, 0);
   box-shadow: 7px 13px 37px darkslategray;
 }
+
 
 .modalContent{
   overflow: scroll;
@@ -46,6 +44,8 @@
 }
 
 .modalCloseBtn{
+  background-color: #1B1E1F;
+  color: #FFF;
   position: absolute;
   top: -10px;
   right: -10px;
@@ -60,15 +60,23 @@
 
 @media only screen and (max-width: 600px){
   .modalContainer{
-    width: 70vw;
+    position: fixed;
+    width: 100vw;
     height: 100vh;
-    background-color: #FFF;
+    background-color: #1D1E20;
     opacity: 100%;
     margin-top: -50vh;
     margin-left: -50vw;
     border-radius: 0;
+    box-shadow: none;
   }
   .modalBg{
     background-color: #FFF;
   }
+  .modalCloseBtn{
+    background-color: #D2CECE;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
 }
