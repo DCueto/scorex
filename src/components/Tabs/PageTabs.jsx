@@ -3,7 +3,7 @@ import PageTab from "./PageTab";
 import { useState } from 'react';
 
 
-const PageTabs = ({tabs, sendActivePageTab}) => {
+const PageTabs = ({tabs, sendActivePageTab, setCreateReviewModalState}) => {
   const [activePageTab, setActivePageTab] = useState(tabs[0]);
   
   const handleActiveTab = (value) => {
@@ -19,7 +19,7 @@ const PageTabs = ({tabs, sendActivePageTab}) => {
       )}
 
       <div className='pageButtons'>
-        <button className='addReviewBtn'>Add Review</button>
+        <button className='addReviewBtn' onClick={ () => setCreateReviewModalState(true) } >Add Review</button>
         <button className='addToMyListBtn'>Add to My List</button>
       </div>
     </div>

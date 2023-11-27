@@ -2,6 +2,8 @@ import './GamePage.css'
 import GameHero from "../../components/Game/GameHero";
 import GameSummary from '../../components/Game/GameSummary';
 import GameInfo from '../../components/Game/GameInfo';
+import Modal from './../../components/Modal/Modal';
+import CreateReviewModal from '../../components/Modal/CreateReviewModal';
 import RAWGService from '../../services/RAWGService';
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -12,6 +14,7 @@ function GamePage(){
   const rawg = new RAWGService();
   const [data, setData] = useState({});
   const [activePageTab, setActivePageTab] = useState('Basic Information');
+  const [isCreateReviewModalActive, setIsCreateReviewModalActive] = useState(false);
   
   useEffect( () => {
 
@@ -26,10 +29,14 @@ function GamePage(){
     setActivePageTab(value);
   }
 
+  const handleModalState = (value) => {
+    setIsCreateReviewModalActive(value);
+  }
+
   return (
     <section className="gamePage">
       <GameHero data={data}/>
-      <PageTabs tabs={['Basic Information', 'Reviews', 'Screenshots', 'Video']} sendActivePageTab={handleActivePageTab} />
+      <PageTabs tabs={['Basic Information', 'Reviews', 'Screenshots', 'Video']} sendActivePageTab={handleActivePageTab} setCreateReviewModalState={handleModalState} />
       { activePageTab === 'Basic Information' 
         && 
         <section className='basicInfoGamePageTab'>
@@ -42,7 +49,19 @@ function GamePage(){
         </section>
       
       }
+
+      { isCreateReviewModalActive
+        ?
+        <Modal setModalState={handleModalState} >
+          <CreateReviewModal />
+        </Modal>
+        : null
+        }
+
+
     </section>
+
+    
   )
 }
 
