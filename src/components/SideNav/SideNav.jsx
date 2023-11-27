@@ -25,7 +25,9 @@ function SideNav({sideNavState, setSideNavState}){
           </Link>
         </li>
         <li className={`${ activeSideTabNav === 'profile' ? 'active' : null}`}><i className='fa-regular fa-user'></i><span>Profile</span> </li>
+          <Link to='/mylist'>
         <li className={`${ activeSideTabNav === 'my list' ? 'active' : null}`}><i className='fa-solid fa-list-ul'></i><span>My List</span></li>
+          </Link>
       </ul>
     </nav>
 }

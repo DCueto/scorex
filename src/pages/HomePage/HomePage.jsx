@@ -4,6 +4,7 @@ import Carrousel from "../../components/Carrousel/Carrousel";
 import SearchResults from '../../components/Search/SearchResults';
 import RAWGService from '../../services/RAWGService';
 
+
 import { useEffect, useState } from 'react';
 import SliderGames from '../../components/Slider/SliderGames';
 
@@ -35,6 +36,9 @@ function HomePage({inputValue, isSearching}){
     </>
   )
 }
+
+
+
 
 
 export default HomePage;
