@@ -52,10 +52,11 @@ const LoginModal = ({setLoginRegisterViewState}) => {
   return (
     <div className="loginModal">
       <form onSubmit={handleLogin}>
+        <p>Welcome!</p>
         <label className='loginLabel' >Email</label>
-        <input type="email" className='loginInput' onBlur={handleInput} ref={emailInput} placeholder="Introduce tu email" required />
-        <label className='loginLabel' >Email</label>
-        <input type="password" className='loginInput' onBlur={handleInput} ref={passwordInput} placeholder="Introduce tu constraseña" required />
+        <input type="email" className='loginInput' onBlur={handleInput} ref={emailInput} placeholder="pinnoccio@yahoo.com" required />
+        <label className='loginLabel' >Password</label>
+        <input type="password" className='loginInput' onBlur={handleInput} ref={passwordInput} placeholder="Insert your password" required />
         <input type="submit" className='loginSubmit' value="Login" />
 
         { formErrorMessage ? <p className='loginError'>{formErrorMessage}</p> : null}

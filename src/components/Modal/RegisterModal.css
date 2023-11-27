@@ -5,14 +5,17 @@
 }
 
 .registerLabel{
+  color: var(--font-color-lighter);
   font-size: 18px;
+  font-weight: 500;
   margin-top: 10px;
   display: block;
 }
 
 .registerInput{
-    width: 95%;
-    background: #D9D9D9;
+    width: 100%;
+    background: #3C3348;
+    opacity: 80%;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -24,18 +27,19 @@
 }
 
 .registerInput::placeholder{
-    color: #916CC1;
+    color: #D9D7D7;
 }
 
 .registerSubmit{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #916CC1;
     border: none;
     padding: 12px;
     color: white;
     margin: 16px 0;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .registerModal p.passwordValidationText{
@@ -60,8 +64,33 @@
 
 @media only screen and (max-width: 600px) {
     .registerModal{
-        margin-top: 100px;
-        margin-left: 40px;
-        box-shadow: none;
+      margin-top: 100px;
+      margin-left: 40px;
+      box-shadow: none;
     }
+    .registerLabel{
+      color: #E6E6E6;
+      font-weight: 600;
+    }
+    .registerInput{
+      color: #FFF;
+      background-color: transparent;
+      border-bottom: 3px solid;
+      border-image: linear-gradient(90deg, #FFF 0%, #916CC1 100%);
+      border-image-slice: 1;
+    }
+    .registerInput::placeholder{
+      color: #9B9B9B;
+    }
+
+    .registerSubmit{
+      font-size: 24px;
+      font-weight: 600;
+      height: 63px;
+      background: linear-gradient(90deg, #39333C 0%, #916CC1 100%);
+    }
+    .registerSubmit:active{
+      background: #916CC1;
+    }
+    
 }
