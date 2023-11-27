@@ -17,6 +17,11 @@ const PageTabs = ({tabs, sendActivePageTab}) => {
         <PageTab key={index} tab={tab} activeTab={activePageTab} setActivePageTab={handleActiveTab}/>
         )
       )}
+
+      <div className='pageButtons'>
+        <button className='addReviewBtn'>Add Review</button>
+        <button className='addToMyListBtn'>Add to My List</button>
+      </div>
     </div>
   )
 }

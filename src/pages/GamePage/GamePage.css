@@ -16,3 +16,16 @@
   margin-left: 3vw;
   width: 40%;
 }
+
+
+@media screen and (max-width: 1000px) {
+  .basicInfoGamePageTab{
+    flex-direction: column;
+  }
+
+  .gamePageCol1, .gamePageCol2{
+    width: 100%;
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
+}

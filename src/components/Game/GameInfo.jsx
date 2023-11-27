@@ -23,6 +23,25 @@ const GameInfo = ({data}) => {
         <h6>Released</h6>
         <span>{data.released}</span>
       </article>
+      <article className='gameInfoItem gameInfoScore'>
+        <div className='gameInfoScoreMetacritic'>
+          <h6>Metacritic</h6>
+          <span>{data.metacritic}</span>
+        </div>
+        <div className='gameInfoScoreRating'>
+          <h6>Rating</h6>
+          <span>{data.rating}</span>
+        </div>
+      </article>
+      <article className='gameInfoItem gameInfoGenres'>
+        <h6>Genres</h6>
+        <div className='gameInfoGenresTags'>
+          {data.genres?.map( (item) => (
+            <span className='genreTag' key={item.id}>{item.name}</span>
+            )
+          )}
+        </div>
+      </article>
     </section>
   )
 }

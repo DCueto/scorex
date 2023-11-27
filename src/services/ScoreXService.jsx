@@ -29,7 +29,7 @@ class ScoreXService {
   }
 
   async postUser(body){
-    const url = `http://localhost:3000/users`;
+    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users`;
 
     return await this.post(url, body)
       .then( response => response.json())
@@ -40,7 +40,7 @@ class ScoreXService {
 
   async getUsers(){
 
-    const url = `http://localhost:3000/users`;
+    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users`;
     
     return await this.get(url)
       .then( response => response.json() )
@@ -51,7 +51,7 @@ class ScoreXService {
 
   async getUser(id){
 
-    const url = `http://localhost:3000/users/${id}`;
+    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users/${id}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -62,7 +62,7 @@ class ScoreXService {
 
   async getReview(id){
 
-    const url = `http://localhost:3000/reviews/${id}`;
+    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews/${id}`;
 
     return await this.get(url)
       .then( response => response.json() )
