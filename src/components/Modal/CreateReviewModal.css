@@ -1,0 +1,133 @@
+
+.createReviewModal{
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+}
+
+.createReviewModal .createReviewHero{
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.createReviewModal .createReviewHero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.createReviewModal .createReviewHero h2{
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0 10%;
+}
+
+
+.createReviewModal form{
+  margin: 140px 0;
+}
+
+.createReviewModal .createReviewScore{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.createReviewModal .createReviewScore .scoreContainer{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  flex-shrink: 0;
+}
+
+.createReviewModal .createReviewScore .scoreContainer span{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.createReviewModal .createReviewScore .scoreSelector{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.createReviewModal .createReviewScore .scoreSelector h4{
+  font-weight: 300;
+}
+
+.createReviewModal .createReviewScore .scoreSelector .scoreSelectorBar{
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  gap: 6px;
+}
+
+.scoreSelector .scoreSelectorBar .scoreSelectorBarItem{
+  width: 10%;
+  height: 100%;
+  opacity: .3;
+}
+
+.createReviewScore .redScoreItem{
+  background-color: var(--mc-color-bad);
+}
+
+.createReviewScore .orangeScoreItem{
+  background-color: var(--mc-color-medium);
+}
+
+.createReviewScore .greenScoreItem{
+  background-color: var(--mc-color-good);
+}
+.createReviewScore .purpleScoreItem{
+  background-color: var(--mc-color-top);
+}
+
+.scoreSelector .scoreSelectorBarItem.activeScoreItem{
+  opacity: 1;
+}
+
+
+.createReviewModal input{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+  padding: 0px 20px;
+  margin: 20px 0;
+  font-family: Inter;
+  color: var(--font-color-light);
+  background-color: var(--input-color-main);
+  border: 0;
+}
+
+
+.createReviewModal textarea{
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  padding: 20px;
+  font-family: Inter;
+  color: var(--font-color-light);
+  background-color: var(--input-color-main);
+  border: 0;
+  resize: none;
+}

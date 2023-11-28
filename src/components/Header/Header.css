@@ -32,8 +32,26 @@ input::placeholder{
   cursor: pointer;
   font-size: 25px;
   color: var(--font-color-light);
-  position: absolute;
   right: 50px;
+  margin-right: 40px;
+}
+
+.topNav .logoutBtn{
+  margin-left: auto;
+  border: 2px solid var(--font-color-light);
+  padding: 7px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.topNav .logoutBtn:hover{
+  background-color: white;
+  color: var(--scorex-color-main-4);
+  border: 2px solid white;
 }
 
 .topNav .burgerMenuIcon{

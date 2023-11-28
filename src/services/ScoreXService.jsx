@@ -60,6 +60,15 @@ class ScoreXService {
 
   }
 
+  async postReview(body){
+    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews`;
+
+    return await this.post(url, body)
+      .then( response => response.json())
+      .then( data => data)
+      .catch( err => console.log('Error en el fetch: ', err));
+  }
+
   async getReview(id){
 
     const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews/${id}`;

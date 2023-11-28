@@ -45,6 +45,13 @@ h2{
   margin-top: -50px;
 }
 
+.marginLeft{
+  margin-left: auto;
+}
+
+.marginRight{
+  margin-right: auto;
+}
 
 @media screen and (min-width: 1250px){
   #app{

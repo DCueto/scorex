@@ -1,12 +1,13 @@
 import './App.css'
 import Router from './router';
 import ScoreXService from './services/ScoreXService';
+import UserStore from './services/UserStore';
 import Header from './components/Header/Header';
 import SideNav from './components/SideNav/SideNav';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import LoginModal from './components/Modal/LoginModal';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import RegisterModal from './components/Modal/RegisterModal';
 import LoginRegisterTabs from './components/Modal/LoginRegisterTabs';
@@ -19,7 +20,14 @@ function App() {
   const [isModalActive, setIsModalActive] = useState(false);
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const [logirOrRegister, setLoginOrRegister] = useState('login');
+  
   const scoreXService = new ScoreXService();
+  const userStore = new UserStore();
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(userStore.isAuthenticated());
+  const [user, setUser] = useState(userStore.getUser());
+
+  const navigate = useNavigate();
 
   useEffect( () => {
 
@@ -28,6 +36,23 @@ function App() {
       .catch( console.error );
 
   }, []);
+
+  useEffect( () => {
+
+    if(isAuthenticated){
+      setUser(userStore.getUser());
+    }
+
+  }, [isAuthenticated]);
+  
+
+  useEffect( () => {
+
+    if(user !== null){
+      navigate(`/profile/${user.username}`);
+    }
+
+  }, [user]);
 
   function handleInputValue(value){
     setInputValue(value);
@@ -49,26 +74,45 @@ function App() {
     setIsSideNavOpen(value);
   }
 
+  function handleAuthenticatedState(value){
+    setIsAuthenticated(value);
+  }
+
   return (
     <div id="app">
-      <BrowserRouter>
-        <Header sendInputValue={handleInputValue} isSearching={handleSearchState} 
+        <Header sendInputValue={handleInputValue} 
+          isSearching={handleSearchState} 
           setModalState={handleModalState} 
-          setSideNavState={handleSideNavState}/>
-        <SideNav sideNavState={isSideNavOpen} setSideNavState={handleSideNavState}/>
+          setSideNavState={handleSideNavState} 
+          isAuthenticated={isAuthenticated} 
+          setIsAuthenticated={handleAuthenticatedState}
+          user={user}
+        />
+
+        <SideNav sideNavState={isSideNavOpen} 
+          setSideNavState={handleSideNavState}
+          isAuthenticated={isAuthenticated}
+          user={user}
+        />
+
         <main className="mainContainer">
-          <Router inputValue={inputValue} isSearching={isSearching} />
+          <Router inputValue={inputValue} isSearching={isSearching} isAuthenticated={isAuthenticated} />
           <Footer />
         </main>
-      </BrowserRouter>
-  
+
       { isModalActive
       ? <Modal setModalState={handleModalState} >
           <img className='logo' src={logo} />
           <LoginRegisterTabs setLoginRegisterViewState={handleLoginRegisterState} />
           { logirOrRegister === 'login'
-          ? <LoginModal setLoginRegisterViewState={handleLoginRegisterState} setModalState={handleModalState} />
-          : logirOrRegister === 'register' ? <RegisterModal setLoginRegisterViewState={handleLoginRegisterState} setModalState={handleModalState} />
+          ? <LoginModal setModalState={handleModalState} setIsAuthenticated={handleAuthenticatedState}/>
+          : logirOrRegister === 'register' 
+
+            ? <RegisterModal 
+              setLoginRegisterViewState={handleLoginRegisterState} 
+              setModalState={handleModalState} 
+              setIsAuthenticated={handleAuthenticatedState} />
+
           : null
           }
         </Modal>

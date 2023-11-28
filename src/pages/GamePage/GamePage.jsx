@@ -9,12 +9,14 @@ import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import PageTabs from '../../components/Tabs/PageTabs';
 
-function GamePage(){
+function GamePage({isAuthenticated}){
   const { gameId } = useParams();
   const rawg = new RAWGService();
   const [data, setData] = useState({});
   const [activePageTab, setActivePageTab] = useState('Basic Information');
   const [isCreateReviewModalActive, setIsCreateReviewModalActive] = useState(false);
+  const [isReviewModalActive, setIsReviewModalActive] = useState(false);
+  const [newReviewId, setNewReviewId] = useState(null);
   
   useEffect( () => {
 
@@ -33,10 +35,21 @@ function GamePage(){
     setIsCreateReviewModalActive(value);
   }
 
+  const handleNewReviewId = (value) => {
+    if(value){
+      setNewReviewId(value);
+
+      setTimeout( () => {
+        setIsReviewModalActive(true);
+      }, 3000);
+    }
+  }
+
+
   return (
     <section className="gamePage">
       <GameHero data={data}/>
-      <PageTabs tabs={['Basic Information', 'Reviews', 'Screenshots', 'Video']} sendActivePageTab={handleActivePageTab} setCreateReviewModalState={handleModalState} />
+      <PageTabs tabs={['Basic Information', 'Reviews', 'Screenshots', 'Video']} sendActivePageTab={handleActivePageTab} setCreateReviewModalState={handleModalState} isAuthenticated={isAuthenticated} />
       { activePageTab === 'Basic Information' 
         && 
         <section className='basicInfoGamePageTab'>
@@ -53,10 +66,18 @@ function GamePage(){
       { isCreateReviewModalActive
         ?
         <Modal setModalState={handleModalState} >
-          <CreateReviewModal />
+          <CreateReviewModal gameData={data} sendNewReviewId={ handleNewReviewId } setCreateReviewModalState={handleModalState} />
         </Modal>
         : null
-        }
+      }
+
+      { isReviewModalActive
+        ?
+        <Modal setModalState={handleModalState} >
+          {/* send id of newReviewId to modal of review  */}
+        </Modal>
+        : null
+      }
 
 
     </section>

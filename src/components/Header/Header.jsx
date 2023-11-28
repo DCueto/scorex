@@ -1,9 +1,18 @@
 import './Header.css';
 import logoIcon from './../../assets/img/logo_s.svg';
-import { useState } from 'react';
+import UserStore from '../../services/UserStore';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Header({sendInputValue, isSearching, setModalState, setSideNavState}){
-  const [userLogged, setUserLogged] = useState(JSON.parse(window.localStorage.getItem('user')));
+function Header({ sendInputValue, isSearching, setModalState, setSideNavState, isAuthenticated, setIsAuthenticated }){
+  const navigate = useNavigate();
+  const userStore = new UserStore();
+  const [user, setUser] = useState(userStore.getUser());
+
+  useEffect( () => {
+    setUser(userStore.getUser());
+  }, [isAuthenticated])
+
 
   function handleSearchSubmit(e){
 
@@ -22,12 +31,26 @@ function Header({sendInputValue, isSearching, setModalState, setSideNavState}){
 
   }
 
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    userStore.logOut();
+    setUser(null);
+
+  }
+
+
   return (
     <header className='topNav'>
       <i className="fa-solid fa-bars-staggered burgerMenuIcon" onClick={() => setSideNavState(true)} ></i>
       <img className='logo-scorex-s' src={logoIcon}></img>
       <input type="text" placeholder="Introduce tu busqueda" onKeyDown={handleSearchSubmit} onChange={handleSearchState}/>
-      <i className="fa-regular fa-user userIcon" onClick={() => setModalState(true)}></i>
+      { isAuthenticated 
+      ? <button className='logoutBtn' onClick={handleLogout} >Logout</button>
+      : null
+      }
+      <i className={`fa-regular fa-user userIcon ${!isAuthenticated && 'marginLeft' }`} 
+        onClick={ () => isAuthenticated ? navigate(`/profile/${user.username}`) : setModalState(true)}
+      ></i>
     </header>
   )
 }

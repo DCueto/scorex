@@ -1,13 +1,19 @@
 import './LoginModal.css';
 import ScoreXService from '../../services/ScoreXService';
+import UserStore from '../../services/UserStore';
 import { useRef, useState } from 'react';import './LoginModal.css';
-const LoginModal = ({setLoginRegisterViewState}) => {
+import { useNavigate } from 'react-router-dom';
+
+const LoginModal = ({setModalState, setIsAuthenticated}) => {
 
   const [formErrorMessage, setFormErrorMessage] = useState(null);
   const scoreXService = new ScoreXService();
+
   const emailInput = useRef(null);
   const passwordInput = useRef(null);
+
   const localStorage = window.localStorage;
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -25,9 +31,13 @@ const LoginModal = ({setLoginRegisterViewState}) => {
         });
 
         if( userValidated ){
+
           console.log('El usuario coincide. Autenticado. ', userValidated);
           setFormErrorMessage(null);
           localStorage.setItem('user', JSON.stringify(userValidated));
+          setIsAuthenticated(true);
+          setModalState(false);
+
         } else {
           console.log('No hay ningún usuario con estos datos');
           setFormErrorMessage('El correo y/o contraseña no coinciden');

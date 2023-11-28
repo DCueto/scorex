@@ -1,7 +1,7 @@
 import ScoreXService from '../../services/ScoreXService';
 import { useEffect, useRef, useState } from 'react';
 import './RegisterModal.css';
-const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
+const RegisterModal = ({setLoginRegisterViewState, setModalState, setIsAuthenticated}) => {
 
   const scoreXService = new ScoreXService();
   const localStorage = window.localStorage;
@@ -96,6 +96,7 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState}) => {
       setModalState(false);
       console.log('Usuario Agregado.');
       console.log('Autenticado, estás logueado', JSON.parse(localStorage.getItem('user')));
+      setIsAuthenticated(true);
     } else {
       // form not validated correctly, show alert
     }
