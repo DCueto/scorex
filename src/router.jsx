@@ -4,6 +4,7 @@ import GamePage from "./pages/GamePage/GamePage";
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 import { useEffect, useState } from 'react';
+import ListPage from './pages/ListPage/ListPage';
 
 function Router({inputValue, isSearching, isAuthenticated}){
 
@@ -12,6 +13,7 @@ function Router({inputValue, isSearching, isAuthenticated}){
     <Route path="/" element={<HomePage inputValue={inputValue} isSearching={isSearching} />} />
     <Route path="/game/:gameId" element={<GamePage isAuthenticated={isAuthenticated} />} />
     <Route path="/profile/:username" element={<ProfilePage isAuthenticated={isAuthenticated} />} />
+    <Route path="/my-list" element={<ListPage/>} />
   </Routes>
   )
 }
