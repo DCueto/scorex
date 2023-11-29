@@ -3,3 +3,7 @@
   flex-wrap: wrap;
   gap: 15px;
 }
+
+hr{
+  color: #B9CFDD;
+}

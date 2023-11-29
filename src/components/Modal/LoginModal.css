@@ -65,10 +65,10 @@
     font-weight: bold;
     margin-top: -50px;
     margin-bottom: 50px;
+    
   }
   .loginModal{
-    margin-top: 100px;
-    margin-left: 40px;
+    margin: 100px 40px 0 40px;
     box-shadow: none;
   }
   .loginLabel{

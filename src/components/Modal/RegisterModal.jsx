@@ -221,7 +221,6 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState, setIsAuthentic
           </p>
         : null
         }
-
         <input className='registerSubmit' type="submit" value="Register" />
 
       </form>
