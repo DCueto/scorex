@@ -103,7 +103,6 @@ const CreateReviewModal = ({gameData, sendNewReviewId, setCreateReviewModalState
         .then( (response) => sendNewReviewId(response.id) )
         .catch( err => console.error(err) )
         .finally( () => {
-          console.log('REVIEW POSTED');
           setCreateReviewModalState(false);
         });
 

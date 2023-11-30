@@ -18,7 +18,6 @@ function HomePage({inputValue, isSearching}){
     if(isSearching){
       rawg.customSearch(inputValue).then( fetchData => {
         setSearchResults(fetchData.results);
-        console.log(fetchData);
       });
     }
   }, [isSearching, inputValue]);

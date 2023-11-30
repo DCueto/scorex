@@ -94,8 +94,6 @@ const RegisterModal = ({setLoginRegisterViewState, setModalState, setIsAuthentic
       scoreXService.postUser(JSON.stringify(newUser));
       localStorage.setItem('user', JSON.stringify(loginUser));
       setModalState(false);
-      console.log('Usuario Agregado.');
-      console.log('Autenticado, estás logueado', JSON.parse(localStorage.getItem('user')));
       setIsAuthenticated(true);
     } else {
       // form not validated correctly, show alert

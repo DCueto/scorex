@@ -34,14 +34,12 @@ const PageTabs = ({tabs, sendActivePageTab, setCreateReviewModalState, isAuthent
 
       for (let item of myList) {
         if(gameData.id == item.gameId){
-          console.log('Game Already on list');
           return;
         }
       }
 
       let userList;
       userList = [...myList, postItem];
-      console.log(userList);
 
       setMyList(userList);
       scorex.patchUserList(userServerData.id, JSON.stringify({"games_played": userList}));

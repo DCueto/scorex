@@ -17,7 +17,6 @@ const LoginModal = ({setModalState, setIsAuthenticated}) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(e);
 
     const formUserData = {
       email: emailInput.current.value,
@@ -32,14 +31,12 @@ const LoginModal = ({setModalState, setIsAuthenticated}) => {
 
         if( userValidated ){
 
-          console.log('El usuario coincide. Autenticado. ', userValidated);
           setFormErrorMessage(null);
           localStorage.setItem('user', JSON.stringify(userValidated));
           setIsAuthenticated(true);
           setModalState(false);
 
         } else {
-          console.log('No hay ningún usuario con estos datos');
           setFormErrorMessage('El correo y/o contraseña no coinciden');
         }
 
@@ -55,7 +52,7 @@ const LoginModal = ({setModalState, setIsAuthenticated}) => {
 
   const validateForm = (input) => {
     if(input.value.trim() === ""){
-      console.log('Input vacío');
+      // input vacío
     }
   }
 

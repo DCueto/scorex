@@ -41,14 +41,12 @@ function Carrousel({endpoint, title}){
   /* SCROLL EVENT */
   function handleScroll(e){
     if(e.target.scrollLeft === 0){
-      console.log('No more scroll on left');
       setIsLeftGradientVisible(false);
     } else if(e.target.scrollLeft > 0){
       setIsLeftGradientVisible(true);
     }
 
     if(e.target.scrollLeft + e.target.offsetWidth === e.target.scrollWidth){
-      console.log('Ha llegado al final');
       setIsRightGradientVisible(false);
     } else{
       setIsRightGradientVisible(true);

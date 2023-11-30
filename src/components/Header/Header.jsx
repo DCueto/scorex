@@ -15,12 +15,10 @@ function Header({ sendInputValue, isSearching, setModalState, setSideNavState, i
 
   useEffect( () => {
     if( userStore.getUser() !== null ){
-      console.log('user is logged');
       setIsAuthenticated(true);
       setUser(userStore.getUser());
       
     } else{
-      console.log('user logged out');
       setIsAuthenticated(false);
       setUser(null);
     }

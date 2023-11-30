@@ -62,7 +62,7 @@ function GamePage({isAuthenticated}){
 
       setTimeout( () => {
         setIsReviewModalActive(true);
-      }, 3000);
+      }, 2000);
     }
   }
 
