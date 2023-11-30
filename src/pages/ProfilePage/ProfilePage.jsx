@@ -46,7 +46,7 @@ const ProfilePage = ({isAuthenticated}) => {
 
     const user = userStore.getUser();
 
-    if(user.username === userData.username){
+    if(user?.username === userData?.username){
       setMyUser(user);
     } else {
 

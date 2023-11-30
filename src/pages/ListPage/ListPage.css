@@ -90,8 +90,10 @@
 }
 
 .bin{
-  width: 46px;
-  height: 44px;
+  color: var(--font-color-light);
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 22px;
 }
 
 

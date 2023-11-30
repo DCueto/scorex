@@ -29,7 +29,7 @@ function ListPage() {
 return (
   <section className="ListPage">
     <div className="imagecontainer">
-      <img className="imgtop" src= "src/assets/img/840_560.jpeg" alt="headerpic"/> 
+      <img className="imgtop" src={myUser.background_image} alt="headerpic"/> 
       <div className="imggradient"></div>
     </div>
     <h1 className='hellouser'> Welcome to your list <p className="coloruser">{myUser.username}</p> </h1>

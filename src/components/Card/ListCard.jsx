@@ -37,7 +37,7 @@ const ListCard = ({item, handleRemoveGameOnMyList}) => {
           {item.metacritic}
         </div>
         <div className="icons">
-          <img data-id={item.gameId} className="bin" src="src/assets/img/4724b936bb77aeb2ce894d3d6b261f4f.png" onClick={handleRemoveGameOnMyList}/>
+          <i data-id={item.gameId} className="bin fa-solid fa-trash" onClick={handleRemoveGameOnMyList}/>
         </div>
       </div>
   )
