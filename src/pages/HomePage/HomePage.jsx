@@ -7,6 +7,7 @@ import RAWGService from '../../services/RAWGService';
 
 import { useEffect, useState } from 'react';
 import SliderGames from '../../components/Slider/SliderGames';
+import FeaturedReviews from '../../components/FeaturedReviews/FeaturedReviews';
 
 function HomePage({inputValue, isSearching}){
   const [searchResults, setSearchResults] = useState([]);
@@ -31,6 +32,7 @@ function HomePage({inputValue, isSearching}){
           <SliderGames slides={slides} />
           <Carrousel endpoint="https://api.rawg.io/api/games?metacritic=50,100&ordering=-released" title="Latests Games" />
           <Carrousel endpoint="https://api.rawg.io/api/games?metacritic=96,100&ordering=-metacritic" title="Best Games by Metacrític" />
+          <FeaturedReviews title='Latests Reviews' type='latests' limit={3} />
         </>
       }
     </>

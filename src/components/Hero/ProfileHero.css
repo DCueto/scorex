@@ -1,0 +1,36 @@
+
+.profileHero{
+  height: 430px;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+
+.profileHero .profileHeroImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileHero .profileHeroInfo{
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+  z-index: 12;
+}
+
+.profileHero .profileHeroInfo h1{
+  font-size: 48px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.profileHero .profileHeroInfo h2{
+  font-size: 40px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: var(--scorex-color-main-1);
+}

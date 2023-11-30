@@ -8,11 +8,14 @@ import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import LoginModal from './components/Modal/LoginModal';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import RegisterModal from './components/Modal/RegisterModal';
 import LoginRegisterTabs from './components/Modal/LoginRegisterTabs';
 
 import logo from './assets/img/logo_full.svg';
+
+// const UserContext = createContext(null);
+export const AuthContext = createContext(null);
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -26,31 +29,37 @@ function App() {
   
   const [isAuthenticated, setIsAuthenticated] = useState(userStore.isAuthenticated());
   const [user, setUser] = useState(userStore.getUser());
+  const [userServerData, setUserServerData] = useState(null);
+  const [myList, setMyList] = useState(null);
 
   const navigate = useNavigate();
 
   useEffect( () => {
 
-    scoreXService.getUsers()
-      .then( console.log )
-      .catch( console.error );
-
-  }, []);
-
-  useEffect( () => {
-
     if(isAuthenticated){
       setUser(userStore.getUser());
+      
+      scoreXService.getUser(userStore.getUser().id)
+        .then( (user) => {
+          setUserServerData(user);
+          setMyList(user.games_played);
+        })
+        .catch( (err) => console.error(err) );
+
+    } else{
+      setUser(null);
+      setUserServerData(null);
+      navigate('/');
     }
 
   }, [isAuthenticated]);
-  
+
 
   useEffect( () => {
 
-    if(user !== null){
-      navigate(`/profile/${user.username}`);
-    }
+    // if(user !== null){
+    //   navigate(`/profile/${user.username}`);
+    // }
 
   }, [user]);
 
@@ -80,6 +89,15 @@ function App() {
 
   return (
     <div id="app">
+      <AuthContext.Provider value={ { 
+
+        isAuthenticated: isAuthenticated, setIsAuthenticated: setIsAuthenticated, 
+        user: user, setUser: setUser, 
+        myList: myList, setMyList: setMyList,
+        userServerData: userServerData, setUserServerData: setUserServerData
+
+        } }>
+
         <Header sendInputValue={handleInputValue} 
           isSearching={handleSearchState} 
           setModalState={handleModalState} 
@@ -100,25 +118,27 @@ function App() {
           <Footer />
         </main>
 
-      { isModalActive
-      ? <Modal setModalState={handleModalState} >
-          <img className='logo' src={logo} />
-          <LoginRegisterTabs setLoginRegisterViewState={handleLoginRegisterState} />
-          { logirOrRegister === 'login'
-          ? <LoginModal setModalState={handleModalState} setIsAuthenticated={handleAuthenticatedState}/>
-          : logirOrRegister === 'register' 
+        { isModalActive
+        ? <Modal setModalState={handleModalState} >
+          <div className='authWrapper'>
+            <img className='logo' src={logo} />
+            <LoginRegisterTabs setLoginRegisterViewState={handleLoginRegisterState} />
+            { logirOrRegister === 'login'
+            ? <LoginModal setModalState={handleModalState} setIsAuthenticated={handleAuthenticatedState}/>
+            : logirOrRegister === 'register' 
 
-            ? <RegisterModal 
-              setLoginRegisterViewState={handleLoginRegisterState} 
-              setModalState={handleModalState} 
-              setIsAuthenticated={handleAuthenticatedState} />
+              ? <RegisterModal 
+                setLoginRegisterViewState={handleLoginRegisterState} 
+                setModalState={handleModalState} 
+                setIsAuthenticated={handleAuthenticatedState} />
 
-          : null
-          }
-        </Modal>
-      : null
-      }
-
+            : null
+            }
+          </div>
+          </Modal>
+        : null
+        }
+      </AuthContext.Provider>
     </div>
   )
 }

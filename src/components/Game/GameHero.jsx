@@ -8,10 +8,10 @@ function GameHero({data}){
 
   return (
     <section className="gameHero">
-      <img className='gameHeroImage' src={data.background_image}></img>
+      <img className='gameHeroImage' src={data?.background_image}></img>
       <div className='gameHeroInfo'>
-        <h1 className='gameHeroTitle'>{data.name}</h1>
-        <h2 className='gameHeroSubtitle'>{data.publishers && data.publishers[0].name}</h2>
+        <h1 className='gameHeroTitle'>{data?.name}</h1>
+        <h2 className='gameHeroSubtitle'>{data.publishers && data.publishers[0]?.name}</h2>
       </div>
       <div className='sliderGradient'></div>
     </section>

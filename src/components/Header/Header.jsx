@@ -13,6 +13,19 @@ function Header({ sendInputValue, isSearching, setModalState, setSideNavState, i
     setUser(userStore.getUser());
   }, [isAuthenticated])
 
+  useEffect( () => {
+    if( userStore.getUser() !== null ){
+      console.log('user is logged');
+      setIsAuthenticated(true);
+      setUser(userStore.getUser());
+      
+    } else{
+      console.log('user logged out');
+      setIsAuthenticated(false);
+      setUser(null);
+    }
+  }, [])
+
 
   function handleSearchSubmit(e){
 

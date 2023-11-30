@@ -1,0 +1,14 @@
+.featuredReviews .featuredReviewsContent{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+  /* flex-wrapX: wrap; */
+  overflow-x: scroll;
+}
+
+.featuredReviews .featuredReviewsContent .colReview{
+  width: 32%;
+  min-width: 400px;
+  /* margin: 0 auto; */
+}

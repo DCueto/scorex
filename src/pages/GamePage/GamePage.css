@@ -8,6 +8,14 @@
   display: flex;
 }
 
+.reviewsGamePageTab{
+  display: flex;
+}
+
+.reviewsGamePageTab .reviews .reviewCard:nth-of-type(1){
+  margin-top: 0;
+}
+
 .gamePageCol1{
   width: 60%;
 }
@@ -15,6 +23,8 @@
 .gamePageCol2{
   margin-left: 3vw;
   width: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -23,9 +33,23 @@
     flex-direction: column;
   }
 
+  .reviewsGamePageTab{
+    flex-direction: column;
+  }
+
   .gamePageCol1, .gamePageCol2{
     width: 100%;
     margin-bottom: 40px;
     margin-left: 0;
+  }
+
+  .gamePageCol2{
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .gameInfoItem{
+    justify-content: center;
   }
 }

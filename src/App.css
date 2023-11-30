@@ -53,6 +53,10 @@ h2{
   margin-right: auto;
 }
 
+#app .authWrapper{
+  padding: 20px 40px;
+}
+
 @media screen and (min-width: 1250px){
   #app{
     grid-template-columns: 250px calc(100% - 250px);
@@ -110,7 +114,7 @@ h2{
 
   #app .topNav input[type="text"]{
     margin-left: 0;
-    width: 10%;
+    /* width: 10%; */
   }
 
   #app .topNav input[type="text"]:focus{
@@ -119,6 +123,7 @@ h2{
 
   #app .topNav .userIcon{
     position: static;
+    margin-right: 0;
   }
 
   #app .topNav .burgerMenuIcon{

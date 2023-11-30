@@ -1,0 +1,43 @@
+
+.profileBar{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.profileBar .profileBarUser{
+  display: flex;
+}
+
+.profileBar .profileBarButtons{
+  display: flex;
+  gap: 10px;
+}
+
+.profileBar .profileBarButtons button{
+  padding: 7px 12px;
+  border: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Inter;
+  cursor: pointer;
+}
+
+.profileBar .profileBarButtons .myListBtn{
+  background-color: var(--scorex-color-main-1);
+}
+
+.profileBar .profileBarButtons .logoutBtn{
+  background-color: var(--scorex-color-main-4);
+}
+
+.profileBar .profileBarButtons .settingsBtn{
+  background-color: var(--scorex-color-main-3);
+}
+
+.profileBar .profileFollowInfo{
+  display: flex;
+  gap: 20px;
+}
