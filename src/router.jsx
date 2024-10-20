@@ -2,8 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage/HomePage";
 import GamePage from "./pages/GamePage/GamePage";
 import ProfilePage from './pages/ProfilePage/ProfilePage';
-
-import { useEffect, useState } from 'react';
 import ListPage from './pages/ListPage/ListPage';
 
 function Router({inputValue, isSearching, isAuthenticated}){

@@ -7,7 +7,7 @@ import SideNav from './components/SideNav/SideNav';
 import Footer from './components/Footer/Footer';
 import Modal from './components/Modal/Modal';
 import LoginModal from './components/Modal/LoginModal';
-import { BrowserRouter, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { createContext, useEffect, useState } from 'react';
 import RegisterModal from './components/Modal/RegisterModal';
 import LoginRegisterTabs from './components/Modal/LoginRegisterTabs';
@@ -54,14 +54,6 @@ function App() {
 
   }, [isAuthenticated]);
 
-
-  useEffect( () => {
-
-    // if(user !== null){
-    //   navigate(`/profile/${user.username}`);
-    // }
-
-  }, [user]);
 
   function handleInputValue(value){
     setInputValue(value);

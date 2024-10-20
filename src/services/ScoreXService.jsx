@@ -4,6 +4,8 @@ class ScoreXService {
   constructor(){
   }
 
+  endpoint = 'https://scorex-server.onrender.com';
+
   get(url) {
 
     let options = {
@@ -41,7 +43,7 @@ class ScoreXService {
   }
 
   async postUser(body){
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users`;
+    const url = `${this.endpoint}/users`;
 
     return await this.post(url, body)
       .then( response => response.json())
@@ -52,7 +54,7 @@ class ScoreXService {
 
   async getUsers(){
 
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users`;
+    const url = `${this.endpoint}/users`;
     
     return await this.get(url)
       .then( response => response.json() )
@@ -63,7 +65,7 @@ class ScoreXService {
 
   async getUser(id){
 
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users/${id}`;
+    const url = `${this.endpoint}/users/${id}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -73,7 +75,7 @@ class ScoreXService {
   }
 
   async getUserByUsername(username){
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users?username=${username}`;
+    const url = `${this.endpoint}/users?username=${username}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -82,7 +84,7 @@ class ScoreXService {
   }
 
   async postReview(body){
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews`;
+    const url = `${this.endpoint}/reviews`;
 
     return await this.post(url, body)
       .then( response => response.json())
@@ -92,7 +94,7 @@ class ScoreXService {
 
   async getReview(id){
 
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews/${id}`;
+    const url = `${this.endpoint}/reviews/${id}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -103,7 +105,7 @@ class ScoreXService {
   
   async getUserReviews(userId){
     
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews?userId=${userId}&_sort=review_date&_order=desc`;
+    const url = `${this.endpoint}/reviews?userId=${userId}&_sort=review_date&_order=desc`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -113,7 +115,7 @@ class ScoreXService {
 
   async getLatestsReviews(numReviews){
 
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews?_sort=review_date&_order=desc&_limit=${numReviews}`;
+    const url = `${this.endpoint}/reviews?_sort=review_date&_order=desc&_limit=${numReviews}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -122,7 +124,7 @@ class ScoreXService {
   }
 
   async getGameReviews(gameId){
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/reviews?gameId=${gameId}`;
+    const url = `${this.endpoint}/reviews?gameId=${gameId}`;
 
     return await this.get(url)
       .then( response => response.json() )
@@ -140,7 +142,7 @@ class ScoreXService {
 
   async patchUserList(userId, body){
 
-    const url = `https://scorex-json-server-194968fe0d2c.herokuapp.com/users/${userId}`;
+    const url = `${this.endpoint}/users/${userId}`;
 
     return await this.patch(url, body)
       .then( response => response.json())

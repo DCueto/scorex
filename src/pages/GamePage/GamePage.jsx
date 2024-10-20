@@ -78,7 +78,6 @@ function GamePage({isAuthenticated}){
     setReviewViewData(data);
   }
 
-
   return (
     <section className="gamePage">
       <GameHero data={data}/>
